@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOM Data Visualiser</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+      padding: 24px;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .sidebar {
+      background: #ffffff;
+      border: 2px solid #111827;
+      border-radius: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .main {
+      display: grid;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+    }
+
+    .top-panel,
+    .map-panel,
+    .chart-panel {
+      background: #ffffff;
+      border: 2px solid #111827;
+      border-radius: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .top-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0 0 12px 0;
+      font-size: 32px;
+      letter-spacing: 0.5px;
+    }
+
+    .filter-group {
+      margin-bottom: 28px;
+    }
+
+    .filter-title {
+      border: 2px solid #111827;
+      border-radius: 10px;
+      padding: 12px;
+      font-weight: bold;
+      margin-bottom: 14px;
+      background: #f9fafb;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 12px 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    select {
+      padding: 8px 12px;
+      border: 1.5px solid #9ca3af;
+      border-radius: 8px;
+      font-size: 15px;
+      background: white;
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .export-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    button {
+      border: 2px solid #111827;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e5f0ff;
+    }
+
+    .map-content {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .map-note {
+      border: 2px solid #111827;
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+      background: #f9fafb;
+      min-height: 150px;
+      box-sizing: border-box;
+    }
+
+    .chart-content {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .chart-note {
+      border: 2px solid #111827;
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+      background: #f9fafb;
+      min-height: 250px;
+      box-sizing: border-box;
+    }
+
+    #map,
+    #chart {
+      width: 100%;
+    }
+
+    .footer {
+      text-align: right;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #374151;
+      padding-right: 12px;
+      margin-top: 16px;
+    }
+
+    .small-text {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .top-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .map-content,
+      .chart-content {
+        grid-template-columns: 1fr;
+      }
+
+      .export-buttons {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="filter-group">
+        <div class="filter-title">Location Selector</div>
+
+        <label>
+          <input type="checkbox" class="location-filter" value="Melbourne" checked>
+          Melbourne
+        </label>
+
+        <label>
+          <input type="checkbox" class="location-filter" value="Sydney" checked>
+          Sydney
+        </label>
+
+        <label>
+          <input type="checkbox" class="location-filter" value="Brisbane" checked>
+          Brisbane
+        </label>
+
+        <label>
+          <input type="checkbox" class="location-filter" value="Perth" checked>
+          Perth
+        </label>
+
+        <label>
+          <input type="checkbox" class="location-filter" value="Adelaide" checked>
+          Adelaide
+        </label>
+
+        <label>
+          <input type="checkbox" class="location-filter" value="Hobart" checked>
+          Hobart
+        </label>
+
+        <label>
+          <input type="checkbox" class="location-filter" value="Darwin" checked>
+          Darwin
+        </label>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-title">Variable Selector</div>
+
+        <label>
+          <input type="checkbox" class="variable-filter" value="Temperature" checked>
+          Temperature
+        </label>
+
+        <label>
+          <input type="checkbox" class="variable-filter" value="Wind" checked>
+          Wind
+        </label>
+
+        <label>
+          <input type="checkbox" class="variable-filter" value="Humidity" checked>
+          Humidity
+        </label>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="top-panel">
+        <div>
+          <h1>BOM Data Visualiser</h1>
+
+          <div class="filter-row">
+            <div>
+              <strong>Year Filter:</strong>
+              <select id="yearFilter">
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024" selected>2024</option>
+              </select>
+            </div>
+
+            <div>
+              <strong>Season Filter:</strong>
+              <select id="seasonFilter">
+                <option value="All" selected>All</option>
+                <option value="Summer">Summer</option>
+                <option value="Winter">Winter</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="small-text">
+            Explore spatial and temporal patterns of temperature, wind speed and humidity across Australia.
+          </p>
+        </div>
+
+        <div class="export-buttons">
+          <button id="exportPNG">Export PNG</button>
+          <button id="exportCSV">Export CSV</button>
+        </div>
+      </section>
+
+      <section class="map-panel">
+        <div class="map-content">
+          <div class="map-note">
+            <strong>Map View</strong><br>
+            Real Australia map with interactive station markers and tooltips.
+            <br><br>
+            Tooltip includes temperature, humidity and wind speed.
+          </div>
+
+          <div id="map"></div>
+        </div>
+      </section>
+
+      <section class="chart-panel">
+        <div class="chart-content">
+          <div class="chart-note">
+            <strong>Time Series View</strong><br>
+            Shows monthly changes for selected variables and locations.
+            <br><br>
+            Users can compare weather trends over time.
+          </div>
+
+          <div id="chart"></div>
+        </div>
+
+        <div class="footer">
+          Author: Team Name<br>
+          Other info: Interactive Spatial Weather Data Project
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const stationData = [
+      { location: "Melbourne", latitude: -37.8136, longitude: 144.9631, year: 2024, season: "Summer", temperature: 28, wind: 18, humidity: 55 },
+      { location: "Sydney", latitude: -33.8688, longitude: 151.2093, year: 2024, season: "Summer", temperature: 30, wind: 20, humidity: 61 },
+      { location: "Brisbane", latitude: -27.4698, longitude: 153.0251, year: 2024, season: "Summer", temperature: 32, wind: 16, humidity: 70 },
+      { location: "Perth", latitude: -31.9523, longitude: 115.8613, year: 2024, season: "Summer", temperature: 34, wind: 22, humidity: 45 },
+      { location: "Adelaide", latitude: -34.9285, longitude: 138.6007, year: 2024, season: "Summer", temperature: 33, wind: 19, humidity: 48 },
+      { location: "Hobart", latitude: -42.8821, longitude: 147.3272, year: 2024, season: "Summer", temperature: 23, wind: 21, humidity: 62 },
+      { location: "Darwin", latitude: -12.4634, longitude: 130.8456, year: 2024, season: "Summer", temperature: 35, wind: 17, humidity: 76 },
+
+      { location: "Melbourne", latitude: -37.8136, longitude: 144.9631, year: 2024, season: "Winter", temperature: 13, wind: 15, humidity: 72 },
+      { location: "Sydney", latitude: -33.8688, longitude: 151.2093, year: 2024, season: "Winter", temperature: 17, wind: 18, humidity: 67 },
+      { location: "Brisbane", latitude: -27.4698, longitude: 153.0251, year: 2024, season: "Winter", temperature: 22, wind: 14, humidity: 64 },
+      { location: "Perth", latitude: -31.9523, longitude: 115.8613, year: 2024, season: "Winter", temperature: 18, wind: 20, humidity: 58 },
+      { location: "Adelaide", latitude: -34.9285, longitude: 138.6007, year: 2024, season: "Winter", temperature: 15, wind: 17, humidity: 65 },
+      { location: "Hobart", latitude: -42.8821, longitude: 147.3272, year: 2024, season: "Winter", temperature: 10, wind: 19, humidity: 75 },
+      { location: "Darwin", latitude: -12.4634, longitude: 130.8456, year: 2024, season: "Winter", temperature: 31, wind: 13, humidity: 54 },
+
+      { location: "Melbourne", latitude: -37.8136, longitude: 144.9631, year: 2023, season: "Summer", temperature: 27, wind: 17, humidity: 57 },
+      { location: "Sydney", latitude: -33.8688, longitude: 151.2093, year: 2023, season: "Summer", temperature: 29, wind: 19, humidity: 63 },
+      { location: "Brisbane", latitude: -27.4698, longitude: 153.0251, year: 2023, season: "Summer", temperature: 31, wind: 15, humidity: 72 },
+      { location: "Perth", latitude: -31.9523, longitude: 115.8613, year: 2023, season: "Summer", temperature: 33, wind: 21, humidity: 46 },
+      { location: "Adelaide", latitude: -34.9285, longitude: 138.6007, year: 2023, season: "Summer", temperature: 32, wind: 18, humidity: 50 },
+      { location: "Hobart", latitude: -42.8821, longitude: 147.3272, year: 2023, season: "Summer", temperature: 22, wind: 20, humidity: 64 },
+      { location: "Darwin", latitude: -12.4634, longitude: 130.8456, year: 2023, season: "Summer", temperature: 34, wind: 16, humidity: 78 },
+
+      { location: "Melbourne", latitude: -37.8136, longitude: 144.9631, year: 2022, season: "Summer", temperature: 26, wind: 16, humidity: 58 },
+      { location: "Sydney", latitude: -33.8688, longitude: 151.2093, year: 2022, season: "Summer", temperature: 28, wind: 18, humidity: 64 },
+      { location: "Brisbane", latitude: -27.4698, longitude: 153.0251, year: 2022, season: "Summer", temperature: 30, wind: 14, humidity: 73 },
+      { location: "Perth", latitude: -31.9523, longitude: 115.8613, year: 2022, season: "Summer", temperature: 32, wind: 20, humidity: 47 },
+      { location: "Adelaide", latitude: -34.9285, longitude: 138.6007, year: 2022, season: "Summer", temperature: 31, wind: 17, humidity: 51 },
+      { location: "Hobart", latitude: -42.8821, longitude: 147.3272, year: 2022, season: "Summer", temperature: 21, wind: 19, humidity: 65 },
+      { location: "Darwin", latitude: -12.4634, longitude: 130.8456, year: 2022, season: "Summer", temperature: 33, wind: 15, humidity: 79 },
+
+      { location: "Melbourne", latitude: -37.8136, longitude: 144.9631, year: 2021, season: "Summer", temperature: 25, wind: 15, humidity: 59 },
+      { location: "Sydney", latitude: -33.8688, longitude: 151.2093, year: 2021, season: "Summer", temperature: 27, wind: 17, humidity: 65 },
+      { location: "Brisbane", latitude: -27.4698, longitude: 153.0251, year: 2021, season: "Summer", temperature: 29, wind: 13, humidity: 74 },
+      { location: "Perth", latitude: -31.9523, longitude: 115.8613, year: 2021, season: "Summer", temperature: 31, wind: 19, humidity: 48 },
+      { location: "Adelaide", latitude: -34.9285, longitude: 138.6007, year: 2021, season: "Summer", temperature: 30, wind: 16, humidity: 52 },
+      { location: "Hobart", latitude: -42.8821, longitude: 147.3272, year: 2021, season: "Summer", temperature: 20, wind: 18, humidity: 66 },
+      { location: "Darwin", latitude: -12.4634, longitude: 130.8456, year: 2021, season: "Summer", temperature: 32, wind: 14, humidity: 80 }
+    ];
+
+    const monthlyData = [
+      { location: "Melbourne", month: "January", variable: "Temperature", value: 28 },
+      { location: "Melbourne", month: "February", variable: "Temperature", value: 27 },
+      { location: "Melbourne", month: "March", variable: "Temperature", value: 24 },
+      { location: "Melbourne", month: "April", variable: "Temperature", value: 20 },
+      { location: "Melbourne", month: "May", variable: "Temperature", value: 16 },
+      { location: "Melbourne", month: "June", variable: "Temperature", value: 13 },
+
+      { location: "Melbourne", month: "January", variable: "Wind", value: 18 },
+      { location: "Melbourne", month: "February", variable: "Wind", value: 17 },
+      { location: "Melbourne", month: "March", variable: "Wind", value: 16 },
+      { location: "Melbourne", month: "April", variable: "Wind", value: 15 },
+      { location: "Melbourne", month: "May", variable: "Wind", value: 16 },
+      { location: "Melbourne", month: "June", variable: "Wind", value: 15 },
+
+      { location: "Melbourne", month: "January", variable: "Humidity", value: 55 },
+      { location: "Melbourne", month: "February", variable: "Humidity", value: 58 },
+      { location: "Melbourne", month: "March", variable: "Humidity", value: 62 },
+      { location: "Melbourne", month: "April", variable: "Humidity", value: 66 },
+      { location: "Melbourne", month: "May", variable: "Humidity", value: 70 },
+      { location: "Melbourne", month: "June", variable: "Humidity", value: 72 },
+
+      { location: "Sydney", month: "January", variable: "Temperature", value: 30 },
+      { location: "Sydney", month: "February", variable: "Temperature", value: 29 },
+      { location: "Sydney", month: "March", variable: "Temperature", value: 26 },
+      { location: "Sydney", month: "April", variable: "Temperature", value: 23 },
+      { location: "Sydney", month: "May", variable: "Temperature", value: 20 },
+      { location: "Sydney", month: "June", variable: "Temperature", value: 17 },
+
+      { location: "Sydney", month: "January", variable: "Wind", value: 20 },
+      { location: "Sydney", month: "February", variable: "Wind", value: 19 },
+      { location: "Sydney", month: "March", variable: "Wind", value: 18 },
+      { location: "Sydney", month: "April", variable: "Wind", value: 17 },
+      { location: "Sydney", month: "May", variable: "Wind", value: 18 },
+      { location: "Sydney", month: "June", variable: "Wind", value: 18 },
+
+      { location: "Sydney", month: "January", variable: "Humidity", value: 61 },
+      { location: "Sydney", month: "February", variable: "Humidity", value: 63 },
+      { location: "Sydney", month: "March", variable: "Humidity", value: 65 },
+      { location: "Sydney", month: "April", variable: "Humidity", value: 66 },
+      { location: "Sydney", month: "May", variable: "Humidity", value: 67 },
+      { location: "Sydney", month: "June", variable: "Humidity", value: 67 },
+
+      { location: "Brisbane", month: "January", variable: "Temperature", value: 32 },
+      { location: "Brisbane", month: "February", variable: "Temperature", value: 31 },
+      { location: "Brisbane", month: "March", variable: "Temperature", value: 29 },
+      { location: "Brisbane", month: "April", variable: "Temperature", value: 27 },
+      { location: "Brisbane", month: "May", variable: "Temperature", value: 24 },
+      { location: "Brisbane", month: "June", variable: "Temperature", value: 22 },
+
+      { location: "Brisbane", month: "January", variable: "Wind", value: 16 },
+      { location: "Brisbane", month: "February", variable: "Wind", value: 15 },
+      { location: "Brisbane", month: "March", variable: "Wind", value: 15 },
+      { location: "Brisbane", month: "April", variable: "Wind", value: 14 },
+      { location: "Brisbane", month: "May", variable: "Wind", value: 14 },
+      { location: "Brisbane", month: "June", variable: "Wind", value: 14 },
+
+      { location: "Brisbane", month: "January", variable: "Humidity", value: 70 },
+      { location: "Brisbane", month: "February", variable: "Humidity", value: 71 },
+      { location: "Brisbane", month: "March", variable: "Humidity", value: 72 },
+      { location: "Brisbane", month: "April", variable: "Humidity", value: 68 },
+      { location: "Brisbane", month: "May", variable: "Humidity", value: 66 },
+      { location: "Brisbane", month: "June", variable: "Humidity", value: 64 },
+
+      { location: "Perth", month: "January", variable: "Temperature", value: 34 },
+      { location: "Perth", month: "February", variable: "Temperature", value: 33 },
+      { location: "Perth", month: "March", variable: "Temperature", value: 30 },
+      { location: "Perth", month: "April", variable: "Temperature", value: 26 },
+      { location: "Perth", month: "May", variable: "Temperature", value: 21 },
+      { location: "Perth", month: "June", variable: "Temperature", value: 18 },
+
+      { location: "Perth", month: "January", variable: "Wind", value: 22 },
+      { location: "Perth", month: "February", variable: "Wind", value: 21 },
+      { location: "Perth", month: "March", variable: "Wind", value: 20 },
+      { location: "Perth", month: "April", variable: "Wind", value: 19 },
+      { location: "Perth", month: "May", variable: "Wind", value: 20 },
+      { location: "Perth", month: "June", variable: "Wind", value: 20 },
+
+      { location: "Perth", month: "January", variable: "Humidity", value: 45 },
+      { location: "Perth", month: "February", variable: "Humidity", value: 47 },
+      { location: "Perth", month: "March", variable: "Humidity", value: 50 },
+      { location: "Perth", month: "April", variable: "Humidity", value: 54 },
+      { location: "Perth", month: "May", variable: "Humidity", value: 56 },
+      { location: "Perth", month: "June", variable: "Humidity", value: 58 }
+    ];
+
+    let mapView;
+    let chartView;
+
+    function getSelectedLocations() {
+      return Array.from(document.querySelectorAll(".location-filter:checked")).map(d => d.value);
+    }
+
+    function getSelectedVariables() {
+      return Array.from(document.querySelectorAll(".variable-filter:checked")).map(d => d.value);
+    }
+
+    function getMapVariable() {
+      const selected = getSelectedVariables();
+      return selected.length > 0 ? selected[0] : "Temperature";
+    }
+
+    function filterStationData() {
+      const selectedLocations = getSelectedLocations();
+      const year = Number(document.getElementById("yearFilter").value);
+      const season = document.getElementById("seasonFilter").value;
+      const mapVariable = getMapVariable();
+
+      return stationData
+        .filter(d => selectedLocations.includes(d.location))
+        .filter(d => d.year === year)
+        .filter(d => season === "All" || d.season === season)
+        .map(d => ({
+          location: d.location,
+          latitude: d.latitude,
+          longitude: d.longitude,
+          year: d.year,
+          season: d.season,
+          Temperature: d.temperature,
+          Wind: d.wind,
+          Humidity: d.humidity,
+          value: d[mapVariable.toLowerCase()]
+        }));
+    }
+
+    function filterMonthlyData() {
+      const selectedLocations = getSelectedLocations();
+      const selectedVariables = getSelectedVariables();
+
+      return monthlyData
+        .filter(d => selectedLocations.includes(d.location))
+        .filter(d => selectedVariables.includes(d.variable));
+    }
+
+    function renderMap() {
+      const mapVariable = getMapVariable();
+      const data = filterStationData();
+
+      const spec = {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "width": "container",
+        "height": 380,
+        "projection": {
+          "type": "mercator",
+          "center": [134, -28],
+          "scale": 650
+        },
+        "layer": [
+          {
+            "data": {
+              "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+              "format": {
+                "type": "topojson",
+                "feature": "countries"
+              }
+            },
+            "transform": [
+              {
+                "filter": "datum.id == '036'"
+              }
+            ],
+            "mark": {
+              "type": "geoshape",
+              "fill": "#e5eef7",
+              "stroke": "#374151",
+              "strokeWidth": 1.2
+            }
+          },
+          {
+            "data": {
+              "values": data
+            },
+            "mark": {
+              "type": "circle",
+              "size": 280,
+              "stroke": "#111827",
+              "strokeWidth": 1.2,
+              "opacity": 0.9
+            },
+            "encoding": {
+              "longitude": {
+                "field": "longitude",
+                "type": "quantitative"
+              },
+              "latitude": {
+                "field": "latitude",
+                "type": "quantitative"
+              },
+              "color": {
+                "field": "value",
+                "type": "quantitative",
+                "title": mapVariable,
+                "scale": {
+                  "scheme": mapVariable === "Temperature" ? "redyellowblue" : mapVariable === "Humidity" ? "blues" : "purples"
+                }
+              },
+              "tooltip": [
+                { "field": "location", "title": "Location" },
+                { "field": "year", "title": "Year" },
+                { "field": "season", "title": "Season" },
+                { "field": "Temperature", "title": "Temperature (°C)" },
+                { "field": "Wind", "title": "Wind Speed (km/h)" },
+                { "field": "Humidity", "title": "Humidity (%)" }
+              ]
+            }
+          },
+          {
+            "data": {
+              "values": data
+            },
+            "mark": {
+              "type": "text",
+              "dy": -16,
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "color": "#111827"
+            },
+            "encoding": {
+              "longitude": {
+                "field": "longitude",
+                "type": "quantitative"
+              },
+              "latitude": {
+                "field": "latitude",
+                "type": "quantitative"
+              },
+              "text": {
+                "field": "location"
+              }
+            }
+          }
+        ],
+        "config": {
+          "view": {
+            "stroke": "#111827",
+            "strokeWidth": 1.5
+          },
+          "legend": {
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          }
+        }
+      };
+
+      vegaEmbed("#map", spec, { actions: false, renderer: "canvas" }).then(result => {
+        mapView = result.view;
+      });
+    }
+
+    function renderChart() {
+      const data = filterMonthlyData();
+
+      const spec = {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "width": "container",
+        "height": 300,
+        "data": {
+          "values": data
+        },
+        "mark": {
+          "type": "line",
+          "point": true,
+          "strokeWidth": 3
+        },
+        "encoding": {
+          "x": {
+            "field": "month",
+            "type": "ordinal",
+            "sort": ["January", "February", "March", "April", "May", "June"],
+            "axis": {
+              "title": "Month"
+            }
+          },
+          "y": {
+            "field": "value",
+            "type": "quantitative",
+            "axis": {
+              "title": "Value"
+            }
+          },
+          "color": {
+            "field": "variable",
+            "type": "nominal",
+            "scale": {
+              "domain": ["Temperature", "Wind", "Humidity"],
+              "range": ["red", "blue", "green"]
+            }
+          },
+          "strokeDash": {
+            "field": "location",
+            "type": "nominal"
+          },
+          "tooltip": [
+            { "field": "location", "title": "Location" },
+            { "field": "month", "title": "Month" },
+            { "field": "variable", "title": "Variable" },
+            { "field": "value", "title": "Value" }
+          ]
+        },
+        "config": {
+          "view": {
+            "stroke": "#111827",
+            "strokeWidth": 1.5
+          },
+          "axis": {
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          },
+          "legend": {
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          }
+        }
+      };
+
+      vegaEmbed("#chart", spec, { actions: false, renderer: "canvas" }).then(result => {
+        chartView = result.view;
+      });
+    }
+
+    function updateVisualisations() {
+      renderMap();
+      renderChart();
+    }
+
+    function exportCSV() {
+      const mapData = filterStationData();
+      const headers = ["location", "latitude", "longitude", "year", "season", "Temperature", "Wind", "Humidity"];
+      const rows = mapData.map(d => headers.map(h => d[h]).join(","));
+      const csv = [headers.join(","), ...rows].join("\n");
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+
+      link.href = url;
+      link.download = "bom_visualiser_data.csv";
+      link.click();
+
+      URL.revokeObjectURL(url);
+    }
+
+    function exportPNG() {
+      if (!mapView) return;
+
+      mapView.toImageURL("png").then(url => {
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "bom_visualiser_map.png";
+        link.click();
+      });
+    }
+
+    document.querySelectorAll(".location-filter").forEach(input => {
+      input.addEventListener("change", updateVisualisations);
+    });
+
+    document.querySelectorAll(".variable-filter").forEach(input => {
+      input.addEventListener("change", updateVisualisations);
+    });
+
+    document.getElementById("yearFilter").addEventListener("change", updateVisualisations);
+    document.getElementById("seasonFilter").addEventListener("change", updateVisualisations);
+    document.getElementById("exportCSV").addEventListener("click", exportCSV);
+    document.getElementById("exportPNG").addEventListener("click", exportPNG);
+
+    updateVisualisations();
+  </script>
+</body>
+</html>
