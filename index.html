@@ -532,7 +532,7 @@
 
     .summary-cards {
       display: grid;
-      grid-template-columns: repeat(var(--variable-columns, 3), minmax(0, 1fr));
+      grid-template-columns: repeat(var(--variable-columns, 3), minmax(220px, 1fr));
       gap: 18px;
       margin-top: 24px;
       width: 100%;
@@ -717,8 +717,8 @@
         </div>
 
         <div class="chart-guide">
-          <div class="guide-item"><span class="guide-icon">▥</span><span>Each column = one variable</span></div>
           <div class="guide-item"><span class="guide-icon">〽️</span><span>Each line = one city</span></div>
+          <div class="guide-item"><span class="guide-icon">◯</span><span>Each point = monthly average</span></div>
           <div class="guide-item"><span class="guide-icon">☝️</span><span>Hover to see exact value</span></div>
         </div>
 
@@ -1100,28 +1100,87 @@
     }
 
     function renderSummaryCards(data, variables, cities) {
-      const cards = document.getElementById("summaryCards");
-      if (!data.length) {
-        cards.innerHTML = `<div class="summary-card"><h4>No data selected</h4><p>Please select at least one city and one weather variable.</p></div>`;
-        return;
-      }
+  const cards = document.getElementById("summaryCards");
 
-      cards.innerHTML = variables.map(variable => {
-        const meta = variableMeta[variable];
-        const values = data.filter(d => d.variable === variable);
-        if (!values.length) return "";
-        const high = values.reduce((a, b) => a.value >= b.value ? a : b);
-        const low = values.reduce((a, b) => a.value <= b.value ? a : b);
-        return `
-          <div class="summary-card" style="border-color:${meta.color}33;background:linear-gradient(135deg, ${meta.color}15, #ffffff 72%);">
-            <h4><span class="dot" style="background:${meta.color}"></span>${meta.title}</h4>
-            <p><strong>Columns separate variables</strong> to avoid mixing units.</p>
-            <p><strong>Highest:</strong> ${high.city}, ${fullMonthNames[high.month]} (${high.value} ${meta.unit})</p>
-            <p><strong>Lowest:</strong> ${low.city}, ${fullMonthNames[low.month]} (${low.value} ${meta.unit})</p>
-            <div class="card-icon">${variable === "Temperature" ? "🌡️" : variable === "Wind" ? "💨" : "💧"}</div>
-          </div>`;
-      }).join("");
+  if (!data.length) {
+    cards.innerHTML = `<div class="summary-card"><h4>No data selected</h4><p>Please select at least one city and one weather variable.</p></div>`;
+    return;
+  }
+
+  // Case 1: only one chart / one variable selected
+  // Show city information cards
+  if (variables.length === 1) {
+    const variable = variables[0];
+    const meta = variableMeta[variable];
+
+    cards.style.setProperty("--variable-columns", cities.length);
+
+    cards.innerHTML = cities.map(city => {
+      const cityData = data.filter(d => d.city === city && d.variable === variable);
+      if (!cityData.length) return "";
+
+      const high = cityData.reduce((a, b) => a.value >= b.value ? a : b);
+      const low = cityData.reduce((a, b) => a.value <= b.value ? a : b);
+
+      return `
+        <div class="summary-card" style="border-color:${cityMeta[city].color}33;background:linear-gradient(135deg, ${cityMeta[city].color}12, #ffffff 72%);">
+          <h4><span class="dot" style="background:${cityMeta[city].color}"></span>${city}</h4>
+          <p>${cityMeta[city].note}</p>
+          <p><strong>Highest:</strong> ${fullMonthNames[high.month]} (${high.value} ${meta.unit})</p>
+          <p><strong>Lowest:</strong> ${fullMonthNames[low.month]} (${low.value} ${meta.unit})</p>
+          <div class="card-icon">${cityMeta[city].icon}</div>
+        </div>`;
+    }).join("");
+
+    return;
+  }
+
+  // Case 2: multiple variables selected
+  // Show variable explanation cards
+  cards.style.setProperty("--variable-columns", variables.length);
+
+  const variableCardStyles = {
+    Temperature: {
+      dot: "#a52a2a",
+      border: "#f7e1e1",
+      background: "linear-gradient(135deg, #fbf0f0, #ffffff 72%)",
+      icon: "🌡️",
+      description: "Shows how warm or cool each city is across months."
+    },
+    Wind: {
+      dot: "#0891b2",
+      border: "#cffafe",
+      background: "linear-gradient(135deg, #ecfeff, #ffffff 72%)",
+      icon: "💨",
+      description: "Shows monthly wind speed patterns for each city."
+    },
+    Humidity: {
+      dot: "#64748b",
+      border: "#e2e8f0",
+      background: "linear-gradient(135deg, #f8fafc, #ffffff 72%)",
+      icon: "💧",
+      description: "Shows how much moisture is in the air each month."
     }
+  };
+
+  cards.innerHTML = variables.map(variable => {
+    const meta = variableMeta[variable];
+    const style = variableCardStyles[variable];
+    const values = data.filter(d => d.variable === variable);
+
+    const high = values.reduce((a, b) => a.value >= b.value ? a : b);
+    const low = values.reduce((a, b) => a.value <= b.value ? a : b);
+
+    return `
+      <div class="summary-card" style="border-color:${style.border};background:${style.background};">
+        <h4><span class="dot" style="background:${style.dot}"></span>${meta.title}</h4>
+        <p>${style.description}</p>
+        <p><strong>Highest:</strong> ${high.city}, ${fullMonthNames[high.month]} (${high.value} ${meta.unit})</p>
+        <p><strong>Lowest:</strong> ${low.city}, ${fullMonthNames[low.month]} (${low.value} ${meta.unit})</p>
+        <div class="card-icon">${style.icon}</div>
+      </div>`;
+  }).join("");
+}
 
     function updateVisualisations() {
       renderMap();
