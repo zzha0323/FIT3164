@@ -12,7 +12,12 @@
     :root {
       --ink: #0f1b3d;
       --muted: #536079;
+      --panel: #ffffff;
+      --line: #d8e2f2;
       --blue: #2f78f6;
+      --red: #ff4a31;
+      --orange: #ffb020;
+      --green: #169c3a;
       --shadow: 0 16px 38px rgba(30, 64, 175, 0.08);
     }
 
@@ -30,53 +35,29 @@
       grid-template-columns: 292px minmax(0, 1fr);
       grid-template-rows: auto 1fr;
       grid-template-areas:
-        "top top"
-        "side main";
+      "top top"
+      "side main";
       gap: 28px;
       padding: 16px;
       min-height: 100vh;
     }
-
-    .top-panel { grid-area: top; }
-    .sidebar { grid-area: side; }
-    .main { grid-area: main; }
-
-    .top-panel,
-    .sidebar,
-    .map-panel,
-    .chart-panel {
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid #d7e3f5;
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      padding: 22px;
-    }
-
+    
     .top-panel {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+      grid-area: top;
+    }
+    .sidebar {
+      grid-area: side;
+    }
+    .main {
+      grid-area: main;
     }
 
-    h1 {
-      margin: 0 0 8px;
-      font-size: 34px;
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 30px;
-    }
-
-    h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-    }
-
-    p {
-      color: var(--muted);
-      line-height: 1.45;
+    .sidebar {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid #c9dcfb;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: var(--shadow);
     }
 
     .sidebar-section {
@@ -84,14 +65,25 @@
       border-bottom: 1px solid #dce7f7;
     }
 
-    .sidebar-section:last-child {
-      border-bottom: 0;
+    .sidebar-section:first-child { padding-top: 0; }
+    .sidebar-section:last-child { border-bottom: 0; }
+
+    .sidebar h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      color: var(--ink);
+    }
+
+    .sidebar p {
+      margin: 0 0 14px;
+      line-height: 1.45;
+      color: var(--muted);
     }
 
     label {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 10px;
       margin: 13px 0;
       color: #27324f;
@@ -100,10 +92,17 @@
       cursor: pointer;
     }
 
+    .label-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     input[type="checkbox"] {
       width: 19px;
       height: 19px;
       accent-color: var(--blue);
+      cursor: pointer;
     }
 
     select {
@@ -119,10 +118,131 @@
 
     .select-row {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       margin: 14px 0;
       gap: 12px;
+    }
+
+    .how-to {
+      margin-top: 22px;
+      padding: 17px;
+      border: 1px solid #b9d6ff;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #f2f8ff 0%, #ffffff 100%);
+      color: #244374;
+      line-height: 1.55;
+    }
+
+    .how-to strong {
+      display: block;
+      margin-bottom: 12px;
+      color: #0b3a7e;
+      font-size: 17px;
+    }
+
+    .main {
+      display: grid;
+      gap: 24px;
+      min-width: 0;
+    }
+
+    .top-panel,
+    .map-panel,
+    .chart-panel {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid #d7e3f5;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      min-width: 0;
+    }
+
+    .top-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      letter-spacing: -0.6px;
+    }
+
+    .small-text {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .export-buttons { display: flex; gap: 12px; align-items: flex-start; }
+
+    .export-dropdown { position: relative; display: inline-block; }
+
+    .export-main-button {
+      min-width: 142px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .export-caret { font-size: 12px; opacity: 0.78; }
+
+    .export-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      width: 250px;
+      padding: 8px;
+      border: 1px solid #c9dcfb;
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: 0 18px 36px rgba(15, 27, 61, 0.14);
+      z-index: 20;
+    }
+
+    .export-menu.open { display: block; }
+
+    .export-option {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      border: 0;
+      border-radius: 10px;
+      box-shadow: none;
+      text-align: left;
+      background: #ffffff;
+    }
+
+    .export-option:hover { background: #f1f7ff; }
+
+    .export-option-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef6ff;
+      font-size: 18px;
+    }
+
+    .export-option strong { display: block; color: #143161; font-size: 14px; }
+    .export-option span:last-child { display: block; margin-top: 3px; color: #5a6780; font-size: 12px; font-weight: 600; }
+
+    .export-help {
+      margin-top: 8px;
+      padding: 0 3px 3px;
+      color: #5a6780;
+      font-size: 12px;
+      line-height: 1.35;
     }
 
     button {
@@ -136,41 +256,54 @@
       box-shadow: 0 6px 18px rgba(30, 64, 175, 0.08);
     }
 
-    button:hover {
-      background: #f0f7ff;
-    }
-
-    .main {
-      display: grid;
-      gap: 24px;
-      min-width: 0;
-    }
+    button:hover { background: #f0f7ff; }
 
     .map-panel {
-      padding: 24px;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid #c6dbf6;
+      background: linear-gradient(135deg, #f8fbff 0%, #edf6ff 100%);
     }
 
     .map-hero {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 270px;
       gap: 20px;
+      padding: 24px;
+      min-width: 0;
     }
+
+    .map-main { min-width: 0; }
 
     .map-header {
       display: flex;
       justify-content: space-between;
+      align-items: start;
       gap: 20px;
       margin-bottom: 14px;
     }
 
-    .map-variable-pill,
-    .active-variable-badge {
+    .map-header h2 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      letter-spacing: -0.45px;
+    }
+
+    .map-header p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .map-variable-pill {
+      flex: 0 0 auto;
       padding: 10px 14px;
       border-radius: 999px;
       border: 1px solid #bfd7fa;
       background: #ffffff;
       color: #173e7a;
       font-weight: 850;
+      box-shadow: 0 8px 20px rgba(47, 120, 246, 0.10);
       white-space: nowrap;
     }
 
@@ -178,16 +311,10 @@
       border: 1px solid #c7d8ee;
       border-radius: 18px;
       padding: 14px;
-      background: #f8fbff;
-    }
-
-    .map-note,
-    .map-insight-card {
-      border: 1px solid #c9dcfb;
-      border-radius: 16px;
-      padding: 17px;
-      background: #ffffff;
-      line-height: 1.5;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(47,120,246,0.10), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #eef7ff 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 16px 38px rgba(15, 27, 61, 0.08);
     }
 
     .map-side {
@@ -196,16 +323,50 @@
       align-content: start;
     }
 
+    .map-note,
+    .map-insight-card {
+      border: 1px solid #c9dcfb;
+      border-radius: 16px;
+      padding: 17px;
+      line-height: 1.5;
+      color: #33405f;
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 12px 28px rgba(30, 64, 175, 0.07);
+    }
+
+    .map-note strong,
+    .map-insight-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #0f1b3d;
+      font-size: 17px;
+    }
+
     .map-stats {
       display: grid;
       gap: 10px;
     }
 
     .map-stat {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 11px;
+      align-items: center;
       padding: 12px;
       border: 1px solid #d5e4f7;
       border-radius: 14px;
       background: #ffffff;
+    }
+
+    .map-stat-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      background: #eef6ff;
     }
 
     .map-stat-label {
@@ -213,6 +374,7 @@
       font-size: 12px;
       font-weight: 750;
       text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .map-stat-value {
@@ -222,12 +384,41 @@
       font-size: 16px;
     }
 
+    #map, #chart { width: 100%; }
+
+    .chart-panel {
+      padding: 24px 28px 16px;
+    }
+
     .chart-title-row {
       display: flex;
       justify-content: space-between;
       align-items: start;
       gap: 18px;
       margin-bottom: 16px;
+    }
+
+    .chart-title-row h2 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+
+    .chart-title-row p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .active-variable-badge {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid #c9dbf5;
+      background: #f3f8ff;
+      color: #1c4f9d;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .chart-guide {
@@ -244,20 +435,78 @@
     }
 
     .guide-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
       text-align: center;
+    }
+
+    .guide-icon {
+      font-size: 25px;
+      color: var(--blue);
     }
 
     .chart-layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 220px;
       gap: 28px;
+      align-items: start;
+    }
+
+    .chart-box {
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .chart-box h3 {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: 20px;
+    }
+
+    .variable-note {
+      margin: -4px 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .multi-chart-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 16px;
+      padding: 9px 12px;
+      border: 1px solid #c9defb;
+      border-radius: 999px;
+      background: #f6faff;
+      color: #244374;
+      font-size: 13px;
+      font-weight: 750;
     }
 
     .city-legend {
+      margin-top: 96px;
       border: 1px solid #d4dfef;
       border-radius: 12px;
       padding: 18px;
       background: #ffffff;
+      box-shadow: 0 10px 25px rgba(15, 27, 61, 0.06);
+      width: 100%;
+      position: relative;
+      z-index: 3;
+    }
+
+    .city-legend h4 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .city-legend p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.35;
     }
 
     .legend-item {
@@ -266,13 +515,19 @@
       gap: 10px;
       margin: 12px 0;
       font-weight: 750;
+      color: #27324f;
     }
 
     .legend-swatch {
       width: 19px;
       height: 19px;
       border-radius: 50%;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
     }
 
     .summary-cards {
@@ -280,15 +535,26 @@
       grid-template-columns: repeat(var(--variable-columns, 3), minmax(220px, 1fr));
       gap: 18px;
       margin-top: 24px;
+      width: 100%;
     }
 
     .summary-card {
       border-radius: 10px;
-      border: 1px solid #d7e3f5;
+      border: 1px solid transparent;
       padding: 15px 16px;
       min-height: 128px;
-      background: #ffffff;
+      line-height: 1.45;
       position: relative;
+      overflow: hidden;
+    }
+
+    .summary-card h4 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: #26314d;
     }
 
     .dot {
@@ -298,62 +564,84 @@
       display: inline-block;
     }
 
+    .summary-card p {
+      margin: 0 0 8px;
+      color: #26314d;
+    }
+
+    .summary-card strong { color: #1c2743; }
+
+    .card-icon {
+      position: absolute;
+      right: 18px;
+      bottom: 14px;
+      font-size: 34px;
+      opacity: 0.85;
+    }
+
+    .note-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 22px;
+      color: #5a6780;
+      font-size: 13px;
+    }
+
     .footer {
       text-align: right;
       font-size: 14px;
+      line-height: 1.5;
       color: #536079;
     }
 
-    #map, #chart {
-      width: 100%;
-    }
-
     @media (max-width: 1100px) {
-      .app {
-        grid-template-columns: 1fr;
+      .app { grid-template-columns: 1fr; 
         grid-template-areas:
-          "top"
-          "side"
-          "main";
+        "top"
+        "side"
+        "main";
       }
-
-      .map-hero,
-      .chart-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .summary-cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .chart-layout { grid-template-columns: 1fr; }
+      .city-legend { margin-top: 16px; max-width: 360px; }
+      .summary-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 760px) {
-      .top-panel,
-      .chart-title-row,
-      .map-header {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .chart-guide,
-      .summary-cards {
-        grid-template-columns: 1fr;
-      }
+      .top-panel, .chart-title-row, .note-row { flex-direction: column; align-items: stretch; }
+      .map-hero { grid-template-columns: 1fr; }
+      .map-header { flex-direction: column; }
+      .map-variable-pill { align-self: flex-start; }
+      .chart-guide { grid-template-columns: 1fr; }
+      .summary-cards { grid-template-columns: 1fr; }
+      .chart-panel { padding: 20px 16px; }
     }
   </style>
 </head>
-
 <body>
   <div class="app">
     <section class="top-panel">
       <div>
         <h1>BOM Data Visualiser</h1>
-        <p>Interactive web-based visualisation platform for exploring and comparing spatial weather data.</p>
+        <p class="small-text">Interactive web-based visualisation platform for exploring and comparing spatial weather data.</p>
       </div>
-
-      <div>
-        <button id="exportMapPNG">Export Map PNG</button>
-        <button id="exportChartPNG">Export Chart PNG</button>
+      <div class="export-buttons">
+        <div class="export-dropdown">
+          <button id="exportPNG" class="export-main-button" aria-haspopup="true" aria-expanded="false">
+            Export PNG <span class="export-caret">▾</span>
+          </button>
+          <div class="export-menu" id="exportPNGMenu" role="menu">
+            <button class="export-option" id="exportMapPNG" type="button" role="menuitem">
+              <span class="export-option-icon">🗺️</span>
+              <span><strong>Export Map PNG</strong><span>Save the spatial weather map</span></span>
+            </button>
+            <button class="export-option" id="exportChartPNG" type="button" role="menuitem">
+              <span class="export-option-icon">📈</span>
+              <span><strong>Export Chart PNG</strong><span>Save the seasonal trend charts</span></span>
+            </button>
+            <div class="export-help">Choose exactly which visualisation you want to download.</div>
+          </div>
+        </div>
         <button id="exportCSV">Export CSV</button>
       </div>
     </section>
@@ -362,64 +650,45 @@
       <div class="sidebar-section">
         <h3>Location (City)</h3>
         <p>Choose one or more cities to compare.</p>
-        <label>Brisbane <input type="checkbox" class="location-filter" value="Brisbane" checked></label>
-        <label>Melbourne <input type="checkbox" class="location-filter" value="Melbourne" checked></label>
-        <label>Perth <input type="checkbox" class="location-filter" value="Perth" checked></label>
-        <label>Sydney <input type="checkbox" class="location-filter" value="Sydney" checked></label>
+        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Brisbane" checked>Brisbane</span></label>
+        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Melbourne" checked>Melbourne</span></label>
+        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Perth" checked>Perth</span></label>
+        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Sydney" checked>Sydney</span></label>
       </div>
 
       <div class="sidebar-section">
         <h3>Weather Variable</h3>
-        <p>Choose one or more weather variables.</p>
-        <label>🌡️ Temperature (°C) <input type="checkbox" class="variable-filter" value="Temperature" checked></label>
-        <label>💨 Wind Speed (km/h) <input type="checkbox" class="variable-filter" value="Wind" checked></label>
-        <label>💧 Humidity (%) <input type="checkbox" class="variable-filter" value="Humidity" checked></label>
+        <p>Choose one or more weather variables. Multiple selections will appear as side-by-side columns.</p>
+        <label><span class="label-left">🌡️ Temperature (°C)</span><input type="checkbox" class="variable-filter" value="Temperature" checked></label>
+        <label><span class="label-left">💨 Wind Speed (km/h)</span><input type="checkbox" class="variable-filter" value="Wind" checked></label>
+        <label><span class="label-left">💧 Humidity (%)</span><input type="checkbox" class="variable-filter" value="Humidity" checked></label>
       </div>
 
       <div class="sidebar-section">
         <h3>Time Selection</h3>
-
-        <div class="select-row">
-          <strong>Year</strong>
-          <select id="yearFilter">
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023" selected>2023</option>
-            <option value="2024">2024</option>
-          </select>
-        </div>
-
-        <div class="select-row">
-          <strong>Season</strong>
-          <select id="seasonFilter">
-            <option value="All" selected>All Year</option>
-            <option value="Summer">Summer</option>
-            <option value="Autumn">Autumn</option>
-            <option value="Winter">Winter</option>
-            <option value="Spring">Spring</option>
-          </select>
-        </div>
+        <div class="select-row"><strong>Year</strong><select id="yearFilter"><option value="2021">2021</option><option value="2022">2022</option><option value="2023" selected>2023</option><option value="2024">2024</option></select></div>
+        <div class="select-row"><strong>Season</strong><select id="seasonFilter"><option value="All" selected>All Year</option><option value="Summer">Summer</option><option value="Autumn">Autumn</option><option value="Winter">Winter</option><option value="Spring">Spring</option></select></div>
       </div>
 
-      <div class="sidebar-section">
-        <h3>How to read</h3>
-        <p>Each variable appears in its own chart column. City colours stay consistent across all views.</p>
-        <p>Hover over map points or chart points to see exact seasonal median values.</p>
+      <div class="how-to">
+        <strong>How to read this chart ⓘ</strong>
+        <p>When several variables are selected, each variable is shown in its own column. City colours stay consistent across all charts.</p>
+        <p>Hover over a point to see the exact seasonal median value.</p>
       </div>
     </aside>
 
     <main class="main">
+      
       <section class="map-panel">
         <div class="map-hero">
-          <div>
+          <div class="map-main">
             <div class="map-header">
               <div>
                 <h2>Spatial Weather Map</h2>
-                <p>Compare selected cities geographically. Marker colour and size show the active weather variable.</p>
+                <p>Compare selected cities geographically. Marker colour and size highlight the currently mapped variable, while tooltips reveal all weather values.</p>
               </div>
               <div class="map-variable-pill" id="mapVariablePill">Mapping: Temperature (°C)</div>
             </div>
-
             <div class="map-stage">
               <div id="map"></div>
             </div>
@@ -428,9 +697,8 @@
           <aside class="map-side">
             <div class="map-note">
               <strong>How to read the map</strong>
-              Bigger, darker markers mean a higher value for the active variable.
+              Bigger, darker markers mean a higher value for the active variable. City labels stay beside each station, and hovering shows Temperature, Wind Speed and Humidity together.
             </div>
-
             <div class="map-insight-card">
               <strong>Selected map summary</strong>
               <div class="map-stats" id="mapStats"></div>
@@ -443,26 +711,31 @@
         <div class="chart-title-row">
           <div>
             <h2>Seasonal Weather Trends</h2>
-            <p>Selected variables are displayed as separate chart columns using seasonal median values.</p>
+            <p>Selected variables are displayed as separate chart columns using seasonal median values, so Temperature, Wind Speed and Humidity can be compared without mixing their units.</p>
           </div>
           <div class="active-variable-badge" id="activeVariableBadge">Viewing: Temperature, Wind, Humidity</div>
         </div>
 
         <div class="chart-guide">
-          <div class="guide-item">〽️ Each line = one city</div>
-          <div class="guide-item">◯ Each point = seasonal median</div>
-          <div class="guide-item">☝️ Hover to see exact value</div>
+          <div class="guide-item"><span class="guide-icon">〽️</span><span>Each line = one city</span></div>
+          <div class="guide-item"><span class="guide-icon">◯</span><span>Each point = seasonal median</span></div>
+          <div class="guide-item"><span class="guide-icon">☝️</span><span>Hover to see exact value</span></div>
         </div>
 
         <div class="chart-layout">
-          <div>
+          <div class="chart-box">
             <h3 id="chartVariableTitle">Selected Weather Variables</h3>
-            <p id="chartVariableNote">Charts use separate y-axes because variables have different units.</p>
+            <p class="variable-note" id="chartVariableNote">Charts use separate y-axes because the variables have different units.</p>
+            <div class="multi-chart-hint">Tip: select 1, 2 or 3 variables to change the number of columns.</div>
             <div id="chart"></div>
             <div class="summary-cards" id="summaryCards"></div>
           </div>
-
           <aside class="city-legend" id="cityLegend"></aside>
+        </div>
+
+        <div class="note-row">
+          <div>Note: Data shows seasonal medians for the selected year. Source: Bureau of Meteorology (BOM).</div>
+          <div>Tip: Use the controls on the left to explore different cities, variables, years and seasons.</div>
         </div>
       </section>
 
@@ -481,9 +754,9 @@
     };
 
     const variableMeta = {
-      Temperature: { label: "Temperature", unit: "°C", title: "Temperature (°C)", color: "#ff4a31" },
-      Wind: { label: "Wind Speed", unit: "km/h", title: "Wind Speed (km/h)", color: "#2f78f6" },
-      Humidity: { label: "Humidity", unit: "%", title: "Humidity (%)", color: "#16a34a" }
+      Temperature: { label: "Temperature", unit: "°C", axis: "Temperature (°C)", title: "Temperature (°C)", color: "#ff4a31", icon: "🌡️" },
+      Wind: { label: "Wind Speed", unit: "km/h", axis: "Wind Speed (km/h)", title: "Wind Speed (km/h)", color: "#2f78f6", icon: "💨" },
+      Humidity: { label: "Humidity", unit: "%", axis: "Humidity (%)", title: "Humidity (%)", color: "#16a34a", icon: "💧" }
     };
 
     const seasons = ["Summer", "Autumn", "Winter", "Spring"];
@@ -505,6 +778,8 @@
         console.error(error);
         document.getElementById("chart").innerHTML =
           "<p style='color:red;font-weight:bold;'>Could not load seasonal data. Run: node scripts/generate_historical.js, then open with a local server.</p>";
+        document.getElementById("mapStats").innerHTML =
+          "<div class='map-stat'><div class='map-stat-icon'>⚠️</div><div><div class='map-stat-label'>Data unavailable</div><div class='map-stat-value'>Could not load seasonal JSON</div></div></div>";
       }
     }
 
@@ -532,7 +807,7 @@
         selectedVariables.includes(d.variable) &&
         Number(d.year) === year &&
         (season === "All" || d.season === season)
-      );
+      ).map(d => ({ ...d, value: Number(d.value) }));
     }
 
     function getMapSeason() {
@@ -574,61 +849,78 @@
           Humidity: Number(humidity),
           value: Number(value)
         };
-      }).filter(d => d.value !== 0);
+      }).filter(d => Number.isFinite(d.value) && d.value !== 0);
     }
 
     function updateMapSummary(data, activeVariable) {
       const stats = document.getElementById("mapStats");
       const pill = document.getElementById("mapVariablePill");
       const meta = variableMeta[activeVariable];
-
       pill.textContent = `Mapping: ${meta.title}`;
 
       if (!data.length) {
-        stats.innerHTML = `
-          <div class="map-stat">
-            <div class="map-stat-label">No data selected</div>
-            <div class="map-stat-value">Choose at least one city and variable</div>
-          </div>`;
+        stats.innerHTML = `<div class="map-stat"><div class="map-stat-icon">⚠️</div><div><div class="map-stat-label">No data selected</div><div class="map-stat-value">Choose at least one city and variable</div></div></div>`;
         return;
       }
 
-      const high = data.reduce((a, b) => a.value >= b.value ? a : b);
-      const low = data.reduce((a, b) => a.value <= b.value ? a : b);
-      const avg = data.reduce((sum, d) => sum + d.value, 0) / data.length;
+      const values = data.map(d => ({ ...d, value: Number(d.value.toFixed(1)) }));
+      const high = values.reduce((a, b) => a.value >= b.value ? a : b);
+      const low = values.reduce((a, b) => a.value <= b.value ? a : b);
+      const avg = values.reduce((sum, d) => sum + d.value, 0) / values.length;
+      const seasonLabel = document.getElementById("seasonFilter").value === "All" ? `${getMapSeason()} snapshot` : document.getElementById("seasonFilter").value;
 
       stats.innerHTML = `
-        <div class="map-stat">
-          <div class="map-stat-label">Highest ${meta.label}</div>
-          <div class="map-stat-value">${high.location}: ${high.value.toFixed(1)} ${meta.unit}</div>
-        </div>
-
-        <div class="map-stat">
-          <div class="map-stat-label">Lowest ${meta.label}</div>
-          <div class="map-stat-value">${low.location}: ${low.value.toFixed(1)} ${meta.unit}</div>
-        </div>
-
-        <div class="map-stat">
-          <div class="map-stat-label">Average</div>
-          <div class="map-stat-value">${avg.toFixed(1)} ${meta.unit} across ${data.length} cities</div>
-        </div>`;
+        <div class="map-stat"><div class="map-stat-icon">${meta.icon}</div><div><div class="map-stat-label">Highest ${meta.label}</div><div class="map-stat-value">${high.location}: ${high.value.toFixed(1)} ${meta.unit}</div></div></div>
+        <div class="map-stat"><div class="map-stat-icon">📍</div><div><div class="map-stat-label">Lowest ${meta.label}</div><div class="map-stat-value">${low.location}: ${low.value.toFixed(1)} ${meta.unit}</div></div></div>
+        <div class="map-stat"><div class="map-stat-icon">∑</div><div><div class="map-stat-label">Average · ${seasonLabel}</div><div class="map-stat-value">${avg.toFixed(1)} ${meta.unit} across ${values.length} cities</div></div></div>`;
     }
 
     function renderMap() {
       const activeVariable = getActiveVariable();
       const data = getStationData().map(d => ({
         ...d,
+        value: Number(d.value.toFixed(1)),
         variableLabel: variableMeta[activeVariable].title,
-        labelText: `${d.location} · ${d.value.toFixed(1)} ${variableMeta[activeVariable].unit}`
+        labelText: `${d.location} · ${Number(d.value).toFixed(1)} ${variableMeta[activeVariable].unit}`
       }));
 
       updateMapSummary(data, activeVariable);
 
-      const colorScheme = activeVariable === "Temperature"
-        ? "reds"
-        : activeVariable === "Wind"
-          ? "blues"
-          : "greens";
+      const colorScheme = activeVariable === "Temperature" ? "reds" : activeVariable === "Wind" ? "blues" : "greens";
+      const labelPositions = {
+        Perth: { dx: -32, dy: -12, align: "right" },
+        Brisbane: { dx: 32, dy: -16, align: "left" },
+        Sydney: { dx: 34, dy: 2, align: "left" },
+        Melbourne: { dx: 0, dy: 34, align: "center" }
+      };
+      const labelLayers = Object.entries(labelPositions).flatMap(([city, pos]) => [
+        {
+          "data": { "values": data },
+          "transform": [{ "filter": `datum.location == '${city}'` }],
+          "mark": {
+            "type": "text", "dx": pos.dx, "dy": pos.dy, "align": pos.align, "baseline": "middle",
+            "fontSize": 14, "fontWeight": "bold", "fill": "#0f1b3d", "stroke": "#ffffff", "strokeWidth": 6, "strokeJoin": "round"
+          },
+          "encoding": {
+            "longitude": { "field": "longitude", "type": "quantitative" },
+            "latitude": { "field": "latitude", "type": "quantitative" },
+            "text": { "field": "labelText" }
+          }
+        },
+        {
+          "data": { "values": data },
+          "transform": [{ "filter": `datum.location == '${city}'` }],
+          "mark": {
+            "type": "text", "dx": pos.dx, "dy": pos.dy, "align": pos.align, "baseline": "middle",
+            "fontSize": 14, "fontWeight": "bold", "fill": "#0f1b3d"
+          },
+          "encoding": {
+            "longitude": { "field": "longitude", "type": "quantitative" },
+            "latitude": { "field": "latitude", "type": "quantitative" },
+            "text": { "field": "labelText" }
+          }
+        }
+      ]);
 
       const spec = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -637,21 +929,21 @@
         "background": "transparent",
         "projection": { "type": "mercator", "center": [134, -28], "scale": 820 },
         "layer": [
+          { "data": { "sphere": true }, "mark": { "type": "geoshape", "fill": "#dff0ff", "opacity": 0.85 } },
+          { "data": { "graticule": { "step": [10, 10] } }, "mark": { "type": "geoshape", "stroke": "#b8cde6", "strokeWidth": 0.7, "opacity": 0.45 } },
           {
-            "data": { "sphere": true },
-            "mark": { "type": "geoshape", "fill": "#dff0ff", "opacity": 0.85 }
-          },
-          {
-            "data": { "graticule": { "step": [10, 10] } },
-            "mark": { "type": "geoshape", "stroke": "#b8cde6", "strokeWidth": 0.7, "opacity": 0.45 }
-          },
-          {
-            "data": {
-              "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
-              "format": { "type": "topojson", "feature": "countries" }
-            },
+            "data": { "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json", "format": { "type": "topojson", "feature": "countries" } },
             "transform": [{ "filter": "datum.id == '036'" }],
             "mark": { "type": "geoshape", "fill": "#f6fbff", "stroke": "#334c74", "strokeWidth": 1.3 }
+          },
+          {
+            "data": { "values": data },
+            "mark": { "type": "circle", "opacity": 0.18, "color": "#0f1b3d" },
+            "encoding": {
+              "longitude": { "field": "longitude", "type": "quantitative" },
+              "latitude": { "field": "latitude", "type": "quantitative" },
+              "size": { "field": "value", "type": "quantitative", "scale": { "range": [850, 2400] }, "legend": null }
+            }
           },
           {
             "data": { "values": data },
@@ -659,21 +951,11 @@
             "encoding": {
               "longitude": { "field": "longitude", "type": "quantitative" },
               "latitude": { "field": "latitude", "type": "quantitative" },
-              "size": {
-                "field": "value",
-                "type": "quantitative",
-                "title": variableMeta[activeVariable].title,
-                "scale": { "range": [250, 980] }
-              },
-              "color": {
-                "field": "value",
-                "type": "quantitative",
-                "title": variableMeta[activeVariable].title,
-                "scale": { "scheme": colorScheme }
-              },
+              "size": { "field": "value", "type": "quantitative", "title": variableMeta[activeVariable].title, "scale": { "range": [250, 980] } },
+              "color": { "field": "value", "type": "quantitative", "title": variableMeta[activeVariable].title, "scale": { "scheme": colorScheme } },
               "tooltip": [
                 { "field": "location", "title": "City" },
-                { "field": "variableLabel", "title": "Mapped Variable" },
+                { "field": "variableLabel", "title": "Mapped variable" },
                 { "field": "value", "title": "Seasonal Median" },
                 { "field": "year", "title": "Year" },
                 { "field": "season", "title": "Season" },
@@ -683,52 +965,15 @@
               ]
             }
           },
-          {
-            "data": { "values": data },
-            "mark": {
-              "type": "text",
-              "dy": -22,
-              "fontSize": 13,
-              "fontWeight": "bold",
-              "fill": "#0f1b3d",
-              "stroke": "#ffffff",
-              "strokeWidth": 4
-            },
-            "encoding": {
-              "longitude": { "field": "longitude", "type": "quantitative" },
-              "latitude": { "field": "latitude", "type": "quantitative" },
-              "text": { "field": "labelText" }
-            }
-          },
-          {
-            "data": { "values": data },
-            "mark": {
-              "type": "text",
-              "dy": -22,
-              "fontSize": 13,
-              "fontWeight": "bold",
-              "fill": "#0f1b3d"
-            },
-            "encoding": {
-              "longitude": { "field": "longitude", "type": "quantitative" },
-              "latitude": { "field": "latitude", "type": "quantitative" },
-              "text": { "field": "labelText" }
-            }
-          }
+          ...labelLayers
         ],
         "config": {
           "view": { "stroke": null },
-          "legend": {
-            "orient": "right",
-            "labelFontSize": 12,
-            "titleFontSize": 13,
-            "titleFontWeight": "bold"
-          }
+          "legend": { "orient": "right", "labelFontSize": 12, "titleFontSize": 13, "titleFontWeight": "bold", "padding": 10 }
         }
       };
 
-      vegaEmbed("#map", spec, { actions: false, renderer: "canvas" })
-        .then(result => { mapView = result.view; });
+      vegaEmbed("#map", spec, { actions: false, renderer: "canvas" }).then(result => { mapView = result.view; });
     }
 
     function renderChart() {
@@ -738,17 +983,22 @@
       const data = getFilteredData().filter(d => variables.includes(d.variable));
 
       const readableVariables = variables.map(v => variableMeta[v].label).join(", ");
+      const chartVariableTitle = document.getElementById("chartVariableTitle");
+      chartVariableTitle.textContent = variables.length > 1 ? "Selected Weather Variables" : variableMeta[variables[0]].title;
+      chartVariableTitle.style.color = variables.length > 1 ? "#0f1b3d" : variableMeta[variables[0]].color;
 
       document.getElementById("activeVariableBadge").textContent = `Viewing: ${readableVariables}`;
-      document.getElementById("chartVariableTitle").textContent =
-        variables.length > 1 ? "Selected Weather Variables" : variableMeta[variables[0]].title;
+      document.getElementById("chartVariableNote").textContent = variables.length > 1
+        ? "Each selected variable is displayed in its own column with its own y-axis, so units are not mixed. City colours are consistent across columns."
+        : "One variable is selected. Add Wind Speed or Humidity from the sidebar to create more chart columns.";
 
-      document.getElementById("chartVariableNote").textContent =
-        variables.length > 1
-          ? "Each selected variable is displayed in its own column with its own y-axis."
-          : "One variable is selected. Add more variables from the sidebar to compare.";
-
-      document.querySelector(".summary-cards").style.setProperty("--variable-columns", variables.length);
+      const chartContainer = document.getElementById("chart");
+      const chartBox = document.querySelector(".chart-box");
+      chartBox.style.setProperty("--variable-columns", variables.length);
+      const availableWidth = Math.max(320, chartContainer.clientWidth || chartBox.clientWidth || 900);
+      const columnWidth = variables.length === 1
+        ? Math.max(620, availableWidth - 30)
+        : Math.max(210, Math.floor((availableWidth - 90 - 28 * (variables.length - 1)) / variables.length));
 
       const spec = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -768,49 +1018,20 @@
           }
         },
         "spec": {
-          "width": 280,
+          "width": columnWidth,
           "height": 320,
           "layer": [
             {
-              "mark": {
-                "type": "line",
-                "strokeWidth": 3,
-                "interpolate": "monotone"
-              },
+              "mark": { "type": "line", "strokeWidth": 3, "interpolate": "monotone" },
               "encoding": {
-                "x": {
-                  "field": "season",
-                  "type": "ordinal",
-                  "sort": seasons,
-                  "axis": {
-                    "title": "Season",
-                    "labelAngle": 0,
-                    "labelFontSize": 12,
-                    "titleFontSize": 14,
-                    "titleFontWeight": "bold"
-                  }
-                },
-                "y": {
-                  "field": "value",
-                  "type": "quantitative",
-                  "axis": {
-                    "title": null,
-                    "labelFontSize": 12,
-                    "gridDash": [4, 4],
-                    "gridColor": "#dce4ef"
-                  }
-                },
+                "x": { "field": "season", "type": "ordinal", "sort": seasons, "axis": { "title": "Season", "labelAngle": 0, "labelFontSize": 12, "titleFontSize": 14, "titleFontWeight": "bold" } },
+                "y": { "field": "value", "type": "quantitative", "axis": { "title": null, "labelFontSize": 12, "gridDash": [4, 4], "gridColor": "#dce4ef" } },
                 "color": {
                   "field": "city",
                   "type": "nominal",
                   "scale": {
                     "domain": ["Brisbane", "Melbourne", "Perth", "Sydney"],
-                    "range": [
-                      cityMeta.Brisbane.color,
-                      cityMeta.Melbourne.color,
-                      cityMeta.Perth.color,
-                      cityMeta.Sydney.color
-                    ]
+                    "range": [cityMeta.Brisbane.color, cityMeta.Melbourne.color, cityMeta.Perth.color, cityMeta.Sydney.color]
                   },
                   "legend": null
                 },
@@ -824,34 +1045,16 @@
               }
             },
             {
-              "mark": {
-                "type": "circle",
-                "size": 76,
-                "filled": true,
-                "stroke": "white",
-                "strokeWidth": 2
-              },
+              "mark": { "type": "circle", "size": 76, "filled": true, "stroke": "white", "strokeWidth": 2 },
               "encoding": {
-                "x": {
-                  "field": "season",
-                  "type": "ordinal",
-                  "sort": seasons
-                },
-                "y": {
-                  "field": "value",
-                  "type": "quantitative"
-                },
+                "x": { "field": "season", "type": "ordinal", "sort": seasons },
+                "y": { "field": "value", "type": "quantitative" },
                 "color": {
                   "field": "city",
                   "type": "nominal",
                   "scale": {
                     "domain": ["Brisbane", "Melbourne", "Perth", "Sydney"],
-                    "range": [
-                      cityMeta.Brisbane.color,
-                      cityMeta.Melbourne.color,
-                      cityMeta.Perth.color,
-                      cityMeta.Sydney.color
-                    ]
+                    "range": [cityMeta.Brisbane.color, cityMeta.Melbourne.color, cityMeta.Perth.color, cityMeta.Sydney.color]
                   },
                   "legend": null
                 },
@@ -870,17 +1073,12 @@
         "config": {
           "background": "transparent",
           "view": { "stroke": "#d4dfef" },
-          "axis": {
-            "domainColor": "#8d98aa",
-            "tickColor": "#8d98aa",
-            "labelColor": "#27324f",
-            "titleColor": "#18213b"
-          }
+          "axis": { "domainColor": "#8d98aa", "tickColor": "#8d98aa", "labelColor": "#27324f", "titleColor": "#18213b" },
+          "header": { "labelPadding": 10 }
         }
       };
 
-      vegaEmbed("#chart", spec, { actions: false, renderer: "canvas" })
-        .then(result => { chartView = result.view; });
+      vegaEmbed("#chart", spec, { actions: false, renderer: "canvas" }).then(result => { chartView = result.view; });
 
       renderCityLegend(selectedCities);
       renderSummaryCards(data, variables, selectedCities);
@@ -896,7 +1094,7 @@
 
       cityLegend.innerHTML =
         `<h4>Cities</h4><p>Colour shows which city each line belongs to.</p>` +
-        cities.map(city => `
+        cities.map((city, index) => `
           <div class="legend-item">
             <span class="legend-swatch" style="background:${cityMeta[city].color}"></span>
             ${city}
@@ -908,19 +1106,17 @@
       const cards = document.getElementById("summaryCards");
 
       if (!data.length) {
-        cards.innerHTML = `
-          <div class="summary-card">
-            <h4>No data selected</h4>
-            <p>Please select at least one city, variable, year and season.</p>
-          </div>`;
+        cards.innerHTML = `<div class="summary-card"><h4>No data selected</h4><p>Please select at least one city and one weather variable.</p></div>`;
         return;
       }
 
+      // Case 1: only one chart / one variable selected
+      // Show city information cards, using the same card layout and city colours as index_old.html.
       if (variables.length === 1) {
         const variable = variables[0];
         const meta = variableMeta[variable];
 
-        cards.style.setProperty("--variable-columns", cities.length);
+        cards.style.setProperty("--variable-columns", Math.max(cities.length, 1));
 
         cards.innerHTML = cities.map(city => {
           const cityData = data.filter(d => d.city === city && d.variable === variable);
@@ -931,31 +1127,61 @@
 
           return `
             <div class="summary-card" style="border-color:${cityMeta[city].color}33;background:linear-gradient(135deg, ${cityMeta[city].color}12, #ffffff 72%);">
-              <h4><span class="dot" style="background:${cityMeta[city].color}"></span> ${city}</h4>
+              <h4><span class="dot" style="background:${cityMeta[city].color}"></span>${city}</h4>
               <p>${cityMeta[city].note}</p>
-              <p><strong>Highest:</strong> ${high.season} (${high.value} ${meta.unit})</p>
-              <p><strong>Lowest:</strong> ${low.season} (${low.value} ${meta.unit})</p>
-              <div style="font-size:28px;">${cityMeta[city].icon}</div>
+              <p><strong>Highest:</strong> ${high.season} (${Number(high.value).toFixed(1)} ${meta.unit})</p>
+              <p><strong>Lowest:</strong> ${low.season} (${Number(low.value).toFixed(1)} ${meta.unit})</p>
+              <div class="card-icon">${cityMeta[city].icon}</div>
             </div>`;
         }).join("");
 
         return;
       }
 
+      // Case 2: multiple variables selected
+      // Show the variable explanation cards with the exact colour treatment from index_old.html.
       cards.style.setProperty("--variable-columns", variables.length);
+
+      const variableCardStyles = {
+        Temperature: {
+          dot: "#a52a2a",
+          border: "#f7e1e1",
+          background: "linear-gradient(135deg, #fbf0f0, #ffffff 72%)",
+          icon: "🌡️",
+          description: "Shows how warm or cool each city is across seasons."
+        },
+        Wind: {
+          dot: "#0891b2",
+          border: "#cffafe",
+          background: "linear-gradient(135deg, #ecfeff, #ffffff 72%)",
+          icon: "💨",
+          description: "Shows seasonal wind speed patterns for each city."
+        },
+        Humidity: {
+          dot: "#64748b",
+          border: "#e2e8f0",
+          background: "linear-gradient(135deg, #f8fafc, #ffffff 72%)",
+          icon: "💧",
+          description: "Shows how much moisture is in the air each season."
+        }
+      };
 
       cards.innerHTML = variables.map(variable => {
         const meta = variableMeta[variable];
+        const style = variableCardStyles[variable];
         const values = data.filter(d => d.variable === variable);
+        if (!values.length) return "";
 
         const high = values.reduce((a, b) => a.value >= b.value ? a : b);
         const low = values.reduce((a, b) => a.value <= b.value ? a : b);
 
         return `
-          <div class="summary-card">
-            <h4>${meta.title}</h4>
-            <p><strong>Highest:</strong> ${high.city}, ${high.season} (${high.value} ${meta.unit})</p>
-            <p><strong>Lowest:</strong> ${low.city}, ${low.season} (${low.value} ${meta.unit})</p>
+          <div class="summary-card" style="border-color:${style.border};background:${style.background};">
+            <h4><span class="dot" style="background:${style.dot}"></span>${meta.title}</h4>
+            <p>${style.description}</p>
+            <p><strong>Highest:</strong> ${high.city}, ${high.season} (${Number(high.value).toFixed(1)} ${meta.unit})</p>
+            <p><strong>Lowest:</strong> ${low.city}, ${low.season} (${Number(low.value).toFixed(1)} ${meta.unit})</p>
+            <div class="card-icon">${style.icon}</div>
           </div>`;
       }).join("");
     }
@@ -993,6 +1219,21 @@
       });
     }
 
+    const exportPNG = document.getElementById("exportPNG");
+    const exportPNGMenu = document.getElementById("exportPNGMenu");
+
+    exportPNG.addEventListener("click", () => {
+      const isOpen = exportPNGMenu.classList.toggle("open");
+      exportPNG.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", event => {
+      if (!event.target.closest(".export-dropdown")) {
+        exportPNGMenu.classList.remove("open");
+        exportPNG.setAttribute("aria-expanded", "false");
+      }
+    });
+
     document.querySelectorAll(".location-filter, .variable-filter").forEach(input => {
       input.addEventListener("change", updateVisualisations);
     });
@@ -1000,8 +1241,16 @@
     document.getElementById("yearFilter").addEventListener("change", updateVisualisations);
     document.getElementById("seasonFilter").addEventListener("change", updateVisualisations);
     document.getElementById("exportCSV").addEventListener("click", exportCSV);
-    document.getElementById("exportMapPNG").addEventListener("click", () => downloadPNGFromView(mapView, "bom_spatial_weather_map.png"));
-    document.getElementById("exportChartPNG").addEventListener("click", () => downloadPNGFromView(chartView, "bom_seasonal_weather_trends.png"));
+    document.getElementById("exportMapPNG").addEventListener("click", () => {
+      exportPNGMenu.classList.remove("open");
+      exportPNG.setAttribute("aria-expanded", "false");
+      downloadPNGFromView(mapView, "bom_spatial_weather_map.png");
+    });
+    document.getElementById("exportChartPNG").addEventListener("click", () => {
+      exportPNGMenu.classList.remove("open");
+      exportPNG.setAttribute("aria-expanded", "false");
+      downloadPNGFromView(chartView, "bom_seasonal_weather_trends.png");
+    });
 
     loadData();
   </script>
