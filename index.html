@@ -1170,37 +1170,46 @@
       const activeVariable = getActiveVariable();
       const selectedYear = Number(document.getElementById("yearFilter").value);
       const selectedSeason = document.getElementById("seasonFilter").value;
-      const useOverallAverage = selectedSeason === "All";
 
       return selectedCities.map(city => {
-        const cityRows = seasonalData.filter(d => {
-          if (d.city !== city) return false;
-          if (useOverallAverage) return true;
-          return Number(d.year) === selectedYear && d.season === selectedSeason;
-        });
+        const cityRows = seasonalData.filter(d =>
+          d.city === city &&
+          Number(d.year) === selectedYear &&
+          (selectedSeason === "All" || d.season === selectedSeason)
+        );
 
-        const temp = averageValue(cityRows, "Temperature");
-        const wind = averageValue(cityRows, "Wind");
-        const humidity = averageValue(cityRows, "Humidity");
+        const tempRows = cityRows.filter(d => d.variable === "Temperature");
+        const windRows = cityRows.filter(d => d.variable === "Wind");
+        const humidityRows = cityRows.filter(d => d.variable === "Humidity");
 
-        const value = activeVariable === "Temperature"
-          ? temp
-          : activeVariable === "Wind"
-            ? wind
-            : humidity;
+        const avg = rows =>
+          rows.length
+            ? rows.reduce((sum, d) => sum + Number(d.value), 0) / rows.length
+            : 0;
+
+        const temp = avg(tempRows);
+        const wind = avg(windRows);
+        const humidity = avg(humidityRows);
+
+        const value =
+          activeVariable === "Temperature"
+            ? temp
+            : activeVariable === "Wind"
+              ? wind
+              : humidity;
 
         return {
           location: city,
           latitude: cityMeta[city].latitude,
           longitude: cityMeta[city].longitude,
-          year: useOverallAverage ? "All years" : selectedYear,
-          season: useOverallAverage ? "All seasons" : selectedSeason,
-          Temperature: temp == null ? null : Number(temp),
-          Wind: wind == null ? null : Number(wind),
-          Humidity: humidity == null ? null : Number(humidity),
-          value: value == null ? null : Number(value)
+          year: selectedYear,
+          season: selectedSeason === "All" ? "All Year Average" : selectedSeason,
+          Temperature: Number(temp.toFixed(1)),
+          Wind: Number(wind.toFixed(1)),
+          Humidity: Number(humidity.toFixed(1)),
+          value: Number(value.toFixed(1))
         };
-      }).filter(d => Number.isFinite(d.value));
+      }).filter(d => d.value !== 0);
     }
 
     function updateMapSummary(data, activeVariable) {
