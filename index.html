@@ -317,6 +317,41 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 16px 38px rgba(15, 27, 61, 0.08);
     }
 
+
+    .map-tools {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-top: 14px;
+      padding: 12px 14px;
+      border: 1px solid #c9defb;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.78);
+      color: #244374;
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .map-zoom-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 240px;
+    }
+
+    .map-zoom-control input[type="range"] {
+      width: 160px;
+      accent-color: var(--blue);
+      cursor: pointer;
+    }
+
+    .map-data-note {
+      color: #5a6780;
+      line-height: 1.35;
+      font-weight: 650;
+    }
+
     .map-side {
       display: grid;
       gap: 14px;
@@ -782,6 +817,24 @@
       }
     }
 
+
+    @media (max-width: 760px) {
+      .map-tools {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .map-zoom-control {
+        min-width: 0;
+        justify-content: space-between;
+      }
+
+      .map-zoom-control input[type="range"] {
+        width: min(180px, 48vw);
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -857,6 +910,15 @@
             </div>
             <div class="map-stage">
               <div id="map"></div>
+            </div>
+
+            <div class="map-tools" aria-label="Map display controls">
+              <div class="map-data-note" id="mapDataNote">All Year uses the average across all seasons and all years.</div>
+              <label class="map-zoom-control" for="mapZoom">
+                <span>Map zoom</span>
+                <input id="mapZoom" type="range" min="0.75" max="1.45" step="0.05" value="1" />
+                <span id="mapZoomValue">100%</span>
+              </label>
             </div>
           </div>
 
@@ -981,27 +1043,40 @@
       ).map(d => ({ ...d, value: Number(d.value) }));
     }
 
-    function getMapSeason() {
+    function getMapModeLabel() {
       const selectedSeason = document.getElementById("seasonFilter").value;
-      return selectedSeason === "All" ? "Summer" : selectedSeason;
+      return selectedSeason === "All"
+        ? "All seasons · all years average"
+        : `${selectedSeason} · selected year`;
+    }
+
+    function averageValue(rows, variable) {
+      const values = rows
+        .filter(d => d.variable === variable)
+        .map(d => Number(d.value))
+        .filter(Number.isFinite);
+
+      if (!values.length) return null;
+      return values.reduce((sum, value) => sum + value, 0) / values.length;
     }
 
     function getStationData() {
       const selectedCities = getSelectedLocations();
       const activeVariable = getActiveVariable();
-      const year = Number(document.getElementById("yearFilter").value);
-      const mapSeason = getMapSeason();
+      const selectedYear = Number(document.getElementById("yearFilter").value);
+      const selectedSeason = document.getElementById("seasonFilter").value;
+      const useOverallAverage = selectedSeason === "All";
 
       return selectedCities.map(city => {
-        const cityRows = seasonalData.filter(d =>
-          d.city === city &&
-          Number(d.year) === year &&
-          d.season === mapSeason
-        );
+        const cityRows = seasonalData.filter(d => {
+          if (d.city !== city) return false;
+          if (useOverallAverage) return true;
+          return Number(d.year) === selectedYear && d.season === selectedSeason;
+        });
 
-        const temp = cityRows.find(d => d.variable === "Temperature")?.value ?? 0;
-        const wind = cityRows.find(d => d.variable === "Wind")?.value ?? 0;
-        const humidity = cityRows.find(d => d.variable === "Humidity")?.value ?? 0;
+        const temp = averageValue(cityRows, "Temperature");
+        const wind = averageValue(cityRows, "Wind");
+        const humidity = averageValue(cityRows, "Humidity");
 
         const value = activeVariable === "Temperature"
           ? temp
@@ -1013,14 +1088,14 @@
           location: city,
           latitude: cityMeta[city].latitude,
           longitude: cityMeta[city].longitude,
-          year,
-          season: mapSeason,
-          Temperature: Number(temp),
-          Wind: Number(wind),
-          Humidity: Number(humidity),
-          value: Number(value)
+          year: useOverallAverage ? "All years" : selectedYear,
+          season: useOverallAverage ? "All seasons" : selectedSeason,
+          Temperature: temp == null ? null : Number(temp),
+          Wind: wind == null ? null : Number(wind),
+          Humidity: humidity == null ? null : Number(humidity),
+          value: value == null ? null : Number(value)
         };
-      }).filter(d => Number.isFinite(d.value) && d.value !== 0);
+      }).filter(d => Number.isFinite(d.value));
     }
 
     function updateMapSummary(data, activeVariable) {
@@ -1038,7 +1113,13 @@
       const high = values.reduce((a, b) => a.value >= b.value ? a : b);
       const low = values.reduce((a, b) => a.value <= b.value ? a : b);
       const avg = values.reduce((sum, d) => sum + d.value, 0) / values.length;
-      const seasonLabel = document.getElementById("seasonFilter").value === "All" ? `${getMapSeason()} snapshot` : document.getElementById("seasonFilter").value;
+      const seasonLabel = getMapModeLabel();
+      const mapDataNote = document.getElementById("mapDataNote");
+      if (mapDataNote) {
+        mapDataNote.textContent = document.getElementById("seasonFilter").value === "All"
+          ? "All Year map shows each city's average across every season and every available year."
+          : "Map shows the selected season for the selected year.";
+      }
 
       stats.innerHTML = `
         <div class="map-stat"><div class="map-stat-icon">${meta.icon}</div><div><div class="map-stat-label">Highest ${meta.label}</div><div class="map-stat-value">${high.location}: ${high.value.toFixed(1)} ${meta.unit}</div></div></div>
@@ -1046,7 +1127,18 @@
         <div class="map-stat"><div class="map-stat-icon">∑</div><div><div class="map-stat-label">Average · ${seasonLabel}</div><div class="map-stat-value">${avg.toFixed(1)} ${meta.unit} across ${values.length} cities</div></div></div>`;
     }
 
+    function getMapZoomFactor() {
+      const zoomInput = document.getElementById("mapZoom");
+      return zoomInput ? Number(zoomInput.value) || 1 : 1;
+    }
+
+    function updateMapZoomLabel() {
+      const zoomValue = document.getElementById("mapZoomValue");
+      if (zoomValue) zoomValue.textContent = `${Math.round(getMapZoomFactor() * 100)}%`;
+    }
+
     function renderMap() {
+      updateMapZoomLabel();
       const activeVariable = getActiveVariable();
       const data = getStationData().map(d => ({
         ...d,
@@ -1094,13 +1186,15 @@
       ]);
 
       const mobile = isMobileViewport();
+      const zoomFactor = getMapZoomFactor();
+      const baseProjectionScale = mobile ? 650 : 820;
 
       const spec = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
         "width": "container",
         "height": mobile ? 330 : 430,
         "background": "transparent",
-        "projection": { "type": "mercator", "center": [134, -28], "scale": mobile ? 650 : 820 },
+        "projection": { "type": "mercator", "center": [134, -28], "scale": baseProjectionScale * zoomFactor },
         "layer": [
           { "data": { "sphere": true }, "mark": { "type": "geoshape", "fill": "#dff0ff", "opacity": 0.85 } },
           { "data": { "graticule": { "step": [10, 10] } }, "mark": { "type": "geoshape", "stroke": "#b8cde6", "strokeWidth": 0.7, "opacity": 0.45 } },
@@ -1420,6 +1514,7 @@
 
     document.getElementById("yearFilter").addEventListener("change", updateVisualisations);
     document.getElementById("seasonFilter").addEventListener("change", updateVisualisations);
+    document.getElementById("mapZoom").addEventListener("input", renderMap);
     document.getElementById("exportCSV").addEventListener("click", exportCSV);
     document.getElementById("exportMapPNG").addEventListener("click", () => {
       exportPNGMenu.classList.remove("open");
