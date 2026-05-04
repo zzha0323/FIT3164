@@ -1149,7 +1149,7 @@
 
       updateMapSummary(data, activeVariable);
 
-      const colorScheme = activeVariable === "Temperature" ? "reds" : activeVariable === "Wind" ? "blues" : "greens";
+      const colorScheme = activeVariable === "Temperature" ? "reds" : activeVariable === "Wind" ? "greens" : "blues";
       const labelPositions = {
         Perth: { dx: -32, dy: -12, align: "right" },
         Brisbane: { dx: 32, dy: -16, align: "left" },
@@ -1425,16 +1425,16 @@
           description: "Shows how warm or cool each city is across seasons."
         },
         Wind: {
-          dot: "#0891b2",
-          border: "#cffafe",
-          background: "linear-gradient(135deg, #ecfeff, #ffffff 72%)",
+          dot: "#64748b",
+          border: "#e2e8f0",
+          background: "linear-gradient(135deg, #f8fafc, #ffffff 72%)",
           icon: "💨",
           description: "Shows seasonal wind speed patterns for each city."
         },
         Humidity: {
-          dot: "#64748b",
-          border: "#e2e8f0",
-          background: "linear-gradient(135deg, #f8fafc, #ffffff 72%)",
+          dot: "#0891b2",
+          border: "#cffafe",
+          background: "linear-gradient(135deg, #ecfeff, #ffffff 72%)",
           icon: "💧",
           description: "Shows how much moisture is in the air each season."
         }
