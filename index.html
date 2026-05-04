@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +22,9 @@
       --shadow: 0 16px 38px rgba(30, 64, 175, 0.08);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -35,19 +38,21 @@
       grid-template-columns: 292px minmax(0, 1fr);
       grid-template-rows: auto 1fr;
       grid-template-areas:
-      "top top"
-      "side main";
+        "top top"
+        "side main";
       gap: 28px;
       padding: 16px;
       min-height: 100vh;
     }
-    
+
     .top-panel {
       grid-area: top;
     }
+
     .sidebar {
       grid-area: side;
     }
+
     .main {
       grid-area: main;
     }
@@ -65,8 +70,13 @@
       border-bottom: 1px solid #dce7f7;
     }
 
-    .sidebar-section:first-child { padding-top: 0; }
-    .sidebar-section:last-child { border-bottom: 0; }
+    .sidebar-section:first-child {
+      padding-top: 0;
+    }
+
+    .sidebar-section:last-child {
+      border-bottom: 0;
+    }
 
     .sidebar h3 {
       margin: 0 0 6px;
@@ -177,9 +187,16 @@
       line-height: 1.5;
     }
 
-    .export-buttons { display: flex; gap: 12px; align-items: flex-start; }
+    .export-buttons {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
 
-    .export-dropdown { position: relative; display: inline-block; }
+    .export-dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
     .export-main-button {
       min-width: 142px;
@@ -189,7 +206,10 @@
       gap: 8px;
     }
 
-    .export-caret { font-size: 12px; opacity: 0.78; }
+    .export-caret {
+      font-size: 12px;
+      opacity: 0.78;
+    }
 
     .export-menu {
       display: none;
@@ -205,7 +225,9 @@
       z-index: 20;
     }
 
-    .export-menu.open { display: block; }
+    .export-menu.open {
+      display: block;
+    }
 
     .export-option {
       width: 100%;
@@ -221,7 +243,9 @@
       background: #ffffff;
     }
 
-    .export-option:hover { background: #f1f7ff; }
+    .export-option:hover {
+      background: #f1f7ff;
+    }
 
     .export-option-icon {
       width: 34px;
@@ -234,8 +258,19 @@
       font-size: 18px;
     }
 
-    .export-option strong { display: block; color: #143161; font-size: 14px; }
-    .export-option span:last-child { display: block; margin-top: 3px; color: #5a6780; font-size: 12px; font-weight: 600; }
+    .export-option strong {
+      display: block;
+      color: #143161;
+      font-size: 14px;
+    }
+
+    .export-option span:last-child {
+      display: block;
+      margin-top: 3px;
+      color: #5a6780;
+      font-size: 12px;
+      font-weight: 600;
+    }
 
     .export-help {
       margin-top: 8px;
@@ -256,7 +291,9 @@
       box-shadow: 0 6px 18px rgba(30, 64, 175, 0.08);
     }
 
-    button:hover { background: #f0f7ff; }
+    button:hover {
+      background: #f0f7ff;
+    }
 
     .map-panel {
       padding: 0;
@@ -273,7 +310,9 @@
       min-width: 0;
     }
 
-    .map-main { min-width: 0; }
+    .map-main {
+      min-width: 0;
+    }
 
     .map-header {
       display: flex;
@@ -312,9 +351,9 @@
       border-radius: 18px;
       padding: 14px;
       background:
-        radial-gradient(circle at 18% 20%, rgba(47,120,246,0.10), transparent 28%),
+        radial-gradient(circle at 18% 20%, rgba(47, 120, 246, 0.10), transparent 28%),
         linear-gradient(180deg, #ffffff 0%, #eef7ff 100%);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 16px 38px rgba(15, 27, 61, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 16px 38px rgba(15, 27, 61, 0.08);
     }
 
 
@@ -365,7 +404,7 @@
       padding: 17px;
       line-height: 1.5;
       color: #33405f;
-      background: rgba(255,255,255,0.92);
+      background: rgba(255, 255, 255, 0.92);
       box-shadow: 0 12px 28px rgba(30, 64, 175, 0.07);
     }
 
@@ -419,7 +458,10 @@
       font-size: 16px;
     }
 
-    #map, #chart { width: 100%; }
+    #map,
+    #chart {
+      width: 100%;
+    }
 
     .chart-panel {
       padding: 24px 28px 16px;
@@ -604,7 +646,9 @@
       color: #26314d;
     }
 
-    .summary-card strong { color: #1c2743; }
+    .summary-card strong {
+      color: #1c2743;
+    }
 
     .card-icon {
       position: absolute;
@@ -631,25 +675,60 @@
     }
 
     @media (max-width: 1100px) {
-      .app { grid-template-columns: 1fr; 
+      .app {
+        grid-template-columns: 1fr;
         grid-template-areas:
-        "top"
-        "side"
-        "main";
+          "top"
+          "side"
+          "main";
       }
-      .chart-layout { grid-template-columns: 1fr; }
-      .city-legend { margin-top: 16px; max-width: 360px; }
-      .summary-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+      .chart-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .city-legend {
+        margin-top: 16px;
+        max-width: 360px;
+      }
+
+      .summary-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 760px) {
-      .top-panel, .chart-title-row, .note-row { flex-direction: column; align-items: stretch; }
-      .map-hero { grid-template-columns: 1fr; }
-      .map-header { flex-direction: column; }
-      .map-variable-pill { align-self: flex-start; }
-      .chart-guide { grid-template-columns: 1fr; }
-      .summary-cards { grid-template-columns: 1fr; }
-      .chart-panel { padding: 20px 16px; }
+
+      .top-panel,
+      .chart-title-row,
+      .note-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .map-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .map-header {
+        flex-direction: column;
+      }
+
+      .map-variable-pill {
+        align-self: flex-start;
+      }
+
+      .chart-guide {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .chart-panel {
+        padding: 20px 16px;
+      }
     }
 
     /* Mobile compatibility layer for RTM requirement: keep the old desktop look, but prevent
@@ -800,6 +879,7 @@
     }
 
     @media (max-width: 420px) {
+
       .chart-panel,
       .sidebar,
       .top-panel {
@@ -833,16 +913,16 @@
         width: min(180px, 48vw);
       }
     }
-
-
   </style>
 </head>
+
 <body>
   <div class="app">
     <section class="top-panel">
       <div>
         <h1>BOM Data Visualiser</h1>
-        <p class="small-text">Interactive web-based visualisation platform for exploring and comparing spatial weather data.</p>
+        <p class="small-text">Interactive web-based visualisation platform for exploring and comparing spatial weather
+          data.</p>
       </div>
       <div class="export-buttons">
         <div class="export-dropdown">
@@ -869,42 +949,62 @@
       <div class="sidebar-section">
         <h3>Location (City)</h3>
         <p>Choose one or more cities to compare.</p>
-        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Brisbane" checked>Brisbane</span></label>
-        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Melbourne" checked>Melbourne</span></label>
-        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Perth" checked>Perth</span></label>
-        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Sydney" checked>Sydney</span></label>
+        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Brisbane"
+              checked>Brisbane</span></label>
+        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Melbourne"
+              checked>Melbourne</span></label>
+        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Perth"
+              checked>Perth</span></label>
+        <label><span class="label-left"><input type="checkbox" class="location-filter" value="Sydney"
+              checked>Sydney</span></label>
       </div>
 
       <div class="sidebar-section">
         <h3>Weather Variable</h3>
         <p>Choose one or more weather variables. Multiple selections will appear as side-by-side columns.</p>
-        <label><span class="label-left">🌡️ Temperature (°C)</span><input type="checkbox" class="variable-filter" value="Temperature" checked></label>
-        <label><span class="label-left">💨 Wind Speed (km/h)</span><input type="checkbox" class="variable-filter" value="Wind" checked></label>
-        <label><span class="label-left">💧 Humidity (%)</span><input type="checkbox" class="variable-filter" value="Humidity" checked></label>
+        <label><span class="label-left">🌡️ Temperature (°C)</span><input type="checkbox" class="variable-filter"
+            value="Temperature" checked></label>
+        <label><span class="label-left">💨 Wind Speed (km/h)</span><input type="checkbox" class="variable-filter"
+            value="Wind" checked></label>
+        <label><span class="label-left">💧 Humidity (%)</span><input type="checkbox" class="variable-filter"
+            value="Humidity" checked></label>
       </div>
 
       <div class="sidebar-section">
         <h3>Time Selection</h3>
-        <div class="select-row"><strong>Year</strong><select id="yearFilter"><option value="2021">2021</option><option value="2022">2022</option><option value="2023" selected>2023</option><option value="2024">2024</option></select></div>
-        <div class="select-row"><strong>Season</strong><select id="seasonFilter"><option value="All" selected>All Year</option><option value="Summer">Summer</option><option value="Autumn">Autumn</option><option value="Winter">Winter</option><option value="Spring">Spring</option></select></div>
+        <div class="select-row"><strong>Year</strong><select id="yearFilter">
+            <option value="2021" selected>2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select></div>
+        <div class="select-row"><strong>Season</strong><select id="seasonFilter">
+            <option value="All" selected>All Year</option>
+            <option value="Summer">Summer</option>
+            <option value="Autumn">Autumn</option>
+            <option value="Winter">Winter</option>
+            <option value="Spring">Spring</option>
+          </select></div>
       </div>
 
       <div class="how-to">
         <strong>How to read this chart ⓘ</strong>
-        <p>When several variables are selected, each variable is shown in its own column. City colours stay consistent across all charts.</p>
+        <p>When several variables are selected, each variable is shown in its own column. City colours stay consistent
+          across all charts.</p>
         <p>Hover over a point to see the exact seasonal median value.</p>
       </div>
     </aside>
 
     <main class="main">
-      
+
       <section class="map-panel">
         <div class="map-hero">
           <div class="map-main">
             <div class="map-header">
               <div>
                 <h2>Spatial Weather Map</h2>
-                <p>Compare selected cities geographically. Marker colour and size highlight the currently mapped variable, while tooltips reveal all weather values.</p>
+                <p>Compare selected cities geographically. Marker colour and size highlight the currently mapped
+                  variable, while tooltips reveal all weather values.</p>
               </div>
               <div class="map-variable-pill" id="mapVariablePill">Mapping: Temperature (°C)</div>
             </div>
@@ -913,10 +1013,11 @@
             </div>
 
             <div class="map-tools" aria-label="Map display controls">
-              <div class="map-data-note" id="mapDataNote">All Year uses the average across all seasons and all years.</div>
+              <div class="map-data-note" id="mapDataNote">All Year uses the average across all seasons and all years.
+              </div>
               <label class="map-zoom-control" for="mapZoom">
                 <span>Map zoom</span>
-                <input id="mapZoom" type="range" min="0.75" max="1.45" step="0.05" value="1" />
+                <input id="mapZoom" type="range" min="0.75" max="1.45" step="0.01" value="1" />
                 <span id="mapZoomValue">100%</span>
               </label>
             </div>
@@ -925,7 +1026,8 @@
           <aside class="map-side">
             <div class="map-note">
               <strong>How to read the map</strong>
-              Bigger, darker markers mean a higher value for the active variable. City labels stay beside each station, and hovering shows Temperature, Wind Speed and Humidity together.
+              Bigger, darker markers mean a higher value for the active variable. City labels stay beside each station,
+              and hovering shows Temperature, Wind Speed and Humidity together.
             </div>
             <div class="map-insight-card">
               <strong>Selected map summary</strong>
@@ -939,7 +1041,8 @@
         <div class="chart-title-row">
           <div>
             <h2>Seasonal Weather Trends</h2>
-            <p>Selected variables are displayed as separate chart columns using seasonal median values, so Temperature, Wind Speed and Humidity can be compared without mixing their units.</p>
+            <p>Selected variables are displayed as separate chart columns using seasonal median values, so Temperature,
+              Wind Speed and Humidity can be compared without mixing their units.</p>
           </div>
           <div class="active-variable-badge" id="activeVariableBadge">Viewing: Temperature, Wind, Humidity</div>
         </div>
@@ -953,7 +1056,8 @@
         <div class="chart-layout">
           <div class="chart-box">
             <h3 id="chartVariableTitle">Selected Weather Variables</h3>
-            <p class="variable-note" id="chartVariableNote">Charts use separate y-axes because the variables have different units.</p>
+            <p class="variable-note" id="chartVariableNote">Charts use separate y-axes because the variables have
+              different units.</p>
             <div class="multi-chart-hint">Tip: select 1, 2 or 3 variables to change the number of columns.</div>
             <div id="chart"></div>
             <div class="summary-cards" id="summaryCards"></div>
@@ -968,7 +1072,8 @@
       </section>
 
       <div class="footer">
-        Author: Zongtai Cheng (33670633), Loke Eshen (33522804), Meize Li (34174400), Adolin Lu (33905460), Zhijie Zhang (32505094) · Group: DS_05
+        Author: Zongtai Cheng (33670633), Loke Eshen (33522804), Meize Li (34174400), Adolin Lu (33905460), Zhijie Zhang
+        (32505094) · Group: DS_05
       </div>
     </main>
   </div>
@@ -1467,30 +1572,35 @@
 
     function exportCSV() {
       const data = getFilteredData();
-      const headers = ["city", "season", "year", "variable", "value"];
-      const rows = data.map(d => headers.map(h => d[h]).join(","));
-      const csv = [headers.join(","), ...rows].join("\n");
+      const rows = getFilteredData();
+      const grouped = {};
+      rows.forEach(d => {
+        const key = `${d.city}__${d.season}__${d.year}`;
+
+        if (!grouped[key]) {
+          grouped[key] = {
+            city: d.city, season: d.season, year: d.year, temperature: "", wind: "", humidity: ""
+          };
+        }
+
+        if (d.variable === "Temperature") { grouped[key].temperature = d.value; }
+        if (d.variable === "Wind") { grouped[key].wind = d.value; }
+        if (d.variable === "Humidity") { grouped[key].humidity = d.value; }
+      });
+
+      const header = ["city", "season", "year", "temperature", "wind", "humidity"];
+      const outputRows = Object.values(grouped);
+      const csv = [
+        header.join(","), ...outputRows.map(d => [d.city, d.season, d.year, d.temperature, d.wind, d.humidity].join(","))].join("\n");
 
       const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-      const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
 
-      link.href = url;
+      link.href = URL.createObjectURL(blob);
       link.download = "bom_seasonal_weather_medians.csv";
       link.click();
 
-      URL.revokeObjectURL(url);
-    }
-
-    function downloadPNGFromView(view, filename) {
-      if (!view) return;
-
-      view.toImageURL("png").then(url => {
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = filename;
-        link.click();
-      });
+      URL.revokeObjectURL(link.href);
     }
 
     const exportPNG = document.getElementById("exportPNG");
@@ -1537,4 +1647,5 @@
     loadData();
   </script>
 </body>
+
 </html>
