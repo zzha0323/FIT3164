@@ -3,13 +3,13 @@ const path = require("path");
 const axios = require("axios");
 
 const cities = {
-  Melbourne: "IDCJDW3033",
-  Sydney: "IDCJDW2124",
+  Melbourne: "IDCJDW3049",
+  Sydney: "IDCJDW2125",
   Brisbane: "IDCJDW4019",
   Perth: "IDCJDW6111"
 };
 
-const years = [2021, 2022, 2023, 2024];
+const years = [2025,2026];
 
 function getSeason(month) {
   if ([12, 1, 2].includes(month)) return "Summer";
@@ -92,9 +92,10 @@ function extractRows(html) {
 async function fetchMonth(city, productId, year, month) {
   const ym = `${year}${String(month).padStart(2, "0")}`;
 
-  const url = `https://www.bom.gov.au/climate/dwo/${productId}.${ym}.shtml`;
+  const url = `https://www.bom.gov.au/climate/dwo/${ym}/html/${productId}.${ym}.shtml`;
 
   console.log(`Fetching ${city} ${ym}...`);
+  console.log(url);
 
   try {
     const response = await axios.get(url, {
