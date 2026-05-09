@@ -1,6 +1,7 @@
 const fs = require("fs").promises;
 const path = require("path");
 const axios = require("axios");
+const { wrap } = require("module");
 
 const cities = {
   Melbourne: "IDCJDW3049",
@@ -56,7 +57,8 @@ function extractRows(html) {
     const minTemp = Number(cells[2]);
     const maxTemp = Number(cells[3]);
 
-    const wind = Number(cells[7]);
+    const windRaw = cells[8].trim();
+    const wind = windRaw !== "" ? Number(windRaw) : NaN;
 
     const humidity9am = Number(cells[11]);
     const humidity3pm = Number(cells[17]);
@@ -120,7 +122,7 @@ async function generate() {
   for (const [city, productId] of Object.entries(cities)) {
 
     for (const year of years) {
-
+``
       for (let month = 1; month <= 12; month++) {
 
         const season = getSeason(month);
