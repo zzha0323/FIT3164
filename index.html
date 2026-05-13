@@ -354,6 +354,11 @@
         radial-gradient(circle at 18% 20%, rgba(47, 120, 246, 0.10), transparent 28%),
         linear-gradient(180deg, #ffffff 0%, #eef7ff 100%);
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 16px 38px rgba(15, 27, 61, 0.08);
+
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
     }
 
 
@@ -461,6 +466,7 @@
     #map,
     #chart {
       width: 100%;
+      min-width: 760px;
     }
 
     .chart-panel {
@@ -698,7 +704,9 @@
     }
 
     @media (max-width: 760px) {
-
+      #map {
+        min-width: 640px;
+      }
       .top-panel,
       .chart-title-row,
       .note-row {
@@ -1013,7 +1021,7 @@
               </div>
               <label class="map-zoom-control" for="mapZoom">
                 <span>Map zoom</span>
-                <input id="mapZoom" type="range" min="0.75" max="1.45" step="0.01" value="1" />
+                <input id="mapZoom" type="range" min="0.5" max="1.5" step="0.01" value="1" />
                 <span id="mapZoomValue">100%</span>
               </label>
             </div>
@@ -1306,13 +1314,13 @@
 
       const mobile = isMobileViewport();
       const zoomFactor = getMapZoomFactor();
-      const baseProjectionScale = mobile ? 650 : 820;
+      const baseProjectionScale = mobile ? 520 : 700;
 
       const spec = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
         "width": "container",
-        "height": mobile ? 330 : 430,
-        "background": "transparent",
+        "height": mobile ? 360 : 430,
+        "background": "#ffffff",
         "projection": { "type": "mercator", "center": [134, -28], "scale": baseProjectionScale * zoomFactor },
         "layer": [
           { "data": { "sphere": true }, "mark": { "type": "geoshape", "fill": "#dff0ff", "opacity": 0.85 } },
@@ -1362,7 +1370,7 @@
       vegaEmbed("#map", spec, { actions: false, renderer: "canvas" }).then(result => { mapView = result.view; });
     }
 
-    function renderChart() {
+    function renderChart(showVegaLegend = false, targetSelector = "#chart") {
       const selectedVariables = getSelectedVariables();
       const selectedCities = getSelectedLocations();
       const variables = selectedVariables.length ? selectedVariables : ["Temperature"];
@@ -1393,6 +1401,7 @@
 
       const spec = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "background": "#ffffff",
         "data": { "values": data },
         "facet": {
           [facetDirection]: {
@@ -1426,7 +1435,18 @@
                     "domain": ["Brisbane", "Melbourne", "Perth", "Sydney"],
                     "range": [cityMeta.Brisbane.color, cityMeta.Melbourne.color, cityMeta.Perth.color, cityMeta.Sydney.color]
                   },
-                  "legend": null
+                  "legend": showVegaLegend
+                    ? {
+                      "orient": "bottom",
+                      "direction": "horizontal",
+                      "columns": 4,
+                      "labelFontSize": 13,
+                      "titleFontSize": 14,
+                      "titleFontWeight": "bold",
+                      "symbolSize": 130,
+                      "symbolStrokeWidth": 3
+                    }
+                    : null
                 },
                 "tooltip": [
                   { "field": "city", "title": "City" },
@@ -1464,17 +1484,30 @@
         },
         "resolve": { "scale": { "y": "independent" } },
         "config": {
-          "background": "transparent",
+          "background": "#ffffff",
           "view": { "stroke": "#d4dfef" },
           "axis": { "domainColor": "#8d98aa", "tickColor": "#8d98aa", "labelColor": "#27324f", "titleColor": "#18213b" },
-          "header": { "labelPadding": 10 }
+          "header": { "labelPadding": 10 },
+          "legend": {
+            "labelColor": "#27324f",
+            "titleColor": "#0f1b3d",
+            "padding": 12
+          }
         }
       };
 
-      vegaEmbed("#chart", spec, { actions: false, renderer: "canvas" }).then(result => { chartView = result.view; });
+      if (targetSelector === "#chart") {
+        renderCityLegend(selectedCities);
+        renderSummaryCards(data, variables, selectedCities);
+      }
 
-      renderCityLegend(selectedCities);
-      renderSummaryCards(data, variables, selectedCities);
+      return vegaEmbed(targetSelector, spec, { actions: false, renderer: "canvas" }).then(result => {
+        if (targetSelector === "#chart") {
+          chartView = result.view;
+        }
+
+        return result.view;
+      });
     }
 
     function renderCityLegend(cities) {
@@ -1616,6 +1649,35 @@
       URL.revokeObjectURL(link.href);
     }
 
+    async function downloadPNGFromView(view, filename) {
+      if (!view) {
+        alert("The visualisation is still loading. Please try again in a moment.");
+        return;
+      }
+
+      try {
+        const sourceCanvas = await view.toCanvas();
+
+        const exportCanvas = document.createElement("canvas");
+        exportCanvas.width = sourceCanvas.width;
+        exportCanvas.height = sourceCanvas.height;
+
+        const ctx = exportCanvas.getContext("2d");
+
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
+        ctx.drawImage(sourceCanvas, 0, 0);
+
+        const link = document.createElement("a");
+        link.href = exportCanvas.toDataURL("image/png");
+        link.download = filename;
+        link.click();
+      } catch (error) {
+        console.error("PNG export failed:", error);
+        alert("PNG export failed. Please refresh the page and try again.");
+      }
+    }
+
     const exportPNG = document.getElementById("exportPNG");
     const exportPNGMenu = document.getElementById("exportPNGMenu");
 
@@ -1644,10 +1706,26 @@
       exportPNG.setAttribute("aria-expanded", "false");
       downloadPNGFromView(mapView, "bom_spatial_weather_map.png");
     });
-    document.getElementById("exportChartPNG").addEventListener("click", () => {
+    document.getElementById("exportChartPNG").addEventListener("click", async () => {
       exportPNGMenu.classList.remove("open");
       exportPNG.setAttribute("aria-expanded", "false");
-      downloadPNGFromView(chartView, "bom_seasonal_weather_trends.png");
+
+      const hiddenExportDiv = document.createElement("div");
+      hiddenExportDiv.id = "chartExportHidden";
+      hiddenExportDiv.style.position = "fixed";
+      hiddenExportDiv.style.left = "-9999px";
+      hiddenExportDiv.style.top = "0";
+      hiddenExportDiv.style.width = "1300px";
+      hiddenExportDiv.style.background = "#ffffff";
+
+      document.body.appendChild(hiddenExportDiv);
+
+      try {
+        const exportView = await renderChart(true, "#chartExportHidden");
+        await downloadPNGFromView(exportView, "bom_seasonal_weather_trends.png");
+      } finally {
+        hiddenExportDiv.remove();
+      }
     });
 
     window.addEventListener("resize", () => {
