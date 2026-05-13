@@ -12,6 +12,10 @@ const cities = {
 
 const years = [2025,2026];
 
+// Open-Meteo covers up to 2025-03-31, so BOM DWO starts from April 2025
+const BOM_START_YEAR = 2025;
+const BOM_START_MONTH = 4;
+
 function getSeason(month) {
   if ([12, 1, 2].includes(month)) return "Summer";
   if ([3, 4, 5].includes(month)) return "Autumn";
@@ -83,7 +87,7 @@ function extractRows(html) {
 
     parsed.push({
       temp: avgTemp,
-      wind: Number.isFinite(wind) ? wind : null,
+      wind: Number.isFinite(wind) && wind > 0 ? wind : null,
       humidity: avgHumidity
     });
   }
@@ -123,7 +127,14 @@ async function generate() {
 
     for (const year of years) {
 ``
-      for (let month = 1; month <= 12; month++) {
+      for (let month = 1; month <= 12; month++) { 
+        const now = new Date();
+
+        // Skip months before April 2025 (covered by Open-Meteo)
+        if (year < BOM_START_YEAR || (year === BOM_START_YEAR && month < BOM_START_MONTH)) continue;
+        
+        // Skip future months
+        if (year > now.getFullYear() || (year === now.getFullYear() && month > now.getMonth() + 1)) continue;
 
         const season = getSeason(month);
 

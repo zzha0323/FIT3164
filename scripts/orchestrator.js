@@ -34,6 +34,34 @@ async function runPipeline() {
     console.log("🧹 Running: process_data.js...");
     execSync('node scripts/process_data.js', { stdio: 'inherit' });
 
+    // 4. fetch historical data from Open-Meteo (2020 - Mar 2025)
+    console.log("📅 Running: generate_historical_openmeteo.js...");
+    execSync('node scripts/generate_historical_openmeteo.js', { stdio: 'inherit' });
+
+    // 5. fetch recent data from BOM (Apr 2025 - now)
+    console.log("📅 Running: generate_historical.js...");
+    execSync('node scripts/generate_historical.js', { stdio: 'inherit' });
+
+    // 6. merge both historical outputs into one file
+    console.log("🔀 Merging historical data...");
+    const processedDir = path.join(__dirname, '../data/processed');
+
+    const openMeteoData = JSON.parse(
+        await fs.readFile(path.join(processedDir, 'weather_historical_openmeteo.json'), 'utf-8')
+    );
+
+    const bomData = JSON.parse(
+        await fs.readFile(path.join(processedDir, 'weather_seasonal_medians.json'), 'utf-8')
+    );
+
+    const merged = [...openMeteoData, ...bomData];
+
+    await fs.writeFile(
+        path.join(processedDir, 'weather_seasonal_medians.json'),
+        JSON.stringify(merged, null, 2)
+    );
+    console.log(`✅ Merged ${openMeteoData.length} historical + ${bomData.length} recent records -> weather_seasonal_medians_json`)
+
     console.log("✅ --- All Tasks Completed Successfully ---");
 }
 
