@@ -972,10 +972,8 @@
 
       <div class="sidebar-section">
         <h3>Time Selection</h3>
-        <div class="select-row"><strong>Year</strong><select id="yearFilter">
-            <option value="2026" selected>2026</option>
-            <option value="2025">2025</option>
-          </select></div>
+        <div class="select-row"><strong>Year</strong><select id="yearFilter"></select></div>
+
         <div class="select-row"><strong>Season</strong><select id="seasonFilter">
             <option value="All" selected>All Year</option>
             <option value="Summer">Summer</option>
@@ -1100,6 +1098,14 @@
       return window.matchMedia("(max-width: 760px)").matches;
     }
 
+    function populateYearDropdown() {
+      const years = [...new Set(seasonalData.map(d => Number(d.year)))].sort((a, b) => b - a);
+      const yearFilter = document.getElementById("yearFilter");
+      yearFilter.innerHTML = years.map((y, i) =>
+        `<option value="${y}"${i === 0 ? " selected" : ""}>${y}</option>`
+      ).join("");
+    }
+
     async function loadData() {
       try {
         const res = await fetch("data/processed/weather_seasonal_medians.json");
@@ -1109,6 +1115,7 @@
         }
 
         seasonalData = await res.json();
+        populateYearDropdown();
         updateVisualisations();
       } catch (error) {
         console.error(error);
