@@ -1413,13 +1413,23 @@
         Sydney: { dx: 34, dy: 2, align: "left" },
         Melbourne: { dx: 0, dy: 34, align: "center" }
       };
+
+      const mobile = isMobileViewport();
+      const zoomFactor = getMapZoomFactor();
+      const mapStage = document.querySelector(".map-stage");
+      const mapWidth = "container";
+      const mapHeight = mobile ? 360 : 430;
+      const labelFontSize = clamp(Math.round(14 * zoomFactor), 10, 22);
+      const labelStrokeWidth = clamp(Math.round(6 * zoomFactor), 3, 9);
+      const baseProjectionScale = getBaseProjectionScale();
+
       const labelLayers = Object.entries(labelPositions).flatMap(([city, pos]) => [
         {
           "data": { "values": data },
           "transform": [{ "filter": `datum.location == '${city}'` }],
           "mark": {
             "type": "text", "dx": pos.dx, "dy": pos.dy, "align": pos.align, "baseline": "middle",
-            "fontSize": 14, "fontWeight": "bold", "fill": "#0f1b3d", "stroke": "#ffffff", "strokeWidth": 6, "strokeJoin": "round"
+            "fontSize": labelFontSize, "fontWeight": "bold", "fill": "#0f1b3d", "stroke": "#ffffff", "strokeWidth": labelStrokeWidth, "strokeJoin": "round"
           },
           "encoding": {
             "longitude": { "field": "longitude", "type": "quantitative" },
@@ -1432,7 +1442,7 @@
           "transform": [{ "filter": `datum.location == '${city}'` }],
           "mark": {
             "type": "text", "dx": pos.dx, "dy": pos.dy, "align": pos.align, "baseline": "middle",
-            "fontSize": 14, "fontWeight": "bold", "fill": "#0f1b3d"
+            "fontSize": labelFontSize, "fontWeight": "bold", "fill": "#0f1b3d"
           },
           "encoding": {
             "longitude": { "field": "longitude", "type": "quantitative" },
@@ -1441,13 +1451,6 @@
           }
         }
       ]);
-
-      const mobile = isMobileViewport();
-      const zoomFactor = getMapZoomFactor();
-      const mapStage = document.querySelector(".map-stage");
-      const mapWidth = "container";
-      const mapHeight = mobile ? 360 : 430;
-      const baseProjectionScale = getBaseProjectionScale();
 
       const spec = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
