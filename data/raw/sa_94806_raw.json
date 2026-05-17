@@ -1,0 +1,106 @@
+{
+  "observations": {
+    "notice": [
+      {
+        "copyright": "Copyright Commonwealth of Australia 2026, Bureau of Meteorology. For more information see: http://www.bom.gov.au/other/copyright.shtml http://www.bom.gov.au/other/disclaimer.shtml",
+        "copyright_url": "http://www.bom.gov.au/other/copyright.shtml",
+        "disclaimer_url": "http://www.bom.gov.au/other/disclaimer.shtml",
+        "feedback_url": "http://www.bom.gov.au/other/feedback"
+      }
+    ],
+    "header": [
+      {
+        "refresh_message": "Issued at 10:11 am CST Sunday 17 May 2026",
+        "ID": "IDS60801",
+        "main_ID": "IDS60800",
+        "name": "Mount Barker",
+        "state_time_zone": "SA",
+        "time_zone": "CST",
+        "product_name": "Weather Observations",
+        "state": "South Australia"
+      }
+    ],
+    "data": [
+      {
+        "sort_order": 0,
+        "wmo": 94806,
+        "name": "Mount Barker",
+        "history_product": "IDS60801",
+        "local_date_time": "16/09:00am",
+        "local_date_time_full": "20260516090000",
+        "aifstime_utc": "20260515233000",
+        "lat": -35.1,
+        "lon": 138.8,
+        "apparent_t": 14.2,
+        "cloud": "Mostly cloudy",
+        "cloud_base_m": null,
+        "cloud_oktas": 7,
+        "cloud_type": "-",
+        "cloud_type_id": 30,
+        "delta_t": 0.4,
+        "gust_kmh": null,
+        "gust_kt": null,
+        "air_temp": 14.4,
+        "dewpt": 13.7,
+        "press": null,
+        "press_msl": null,
+        "press_qnh": null,
+        "press_tend": "-",
+        "rain_trace": "6.0",
+        "rel_hum": 96,
+        "sea_state": "-",
+        "swell_dir_worded": "-",
+        "swell_height": null,
+        "swell_period": null,
+        "vis_km": "40",
+        "weather": "Fine",
+        "wind_dir": "W",
+        "wind_spd_kmh": 7,
+        "wind_spd_kt": 4
+      },
+      {
+        "sort_order": 1,
+        "wmo": 94806,
+        "name": "Mount Barker",
+        "history_product": "IDS60801",
+        "local_date_time": "15/09:00am",
+        "local_date_time_full": "20260515090000",
+        "aifstime_utc": "20260514233000",
+        "lat": -35.1,
+        "lon": 138.8,
+        "apparent_t": 16.6,
+        "cloud": "Mostly cloudy",
+        "cloud_base_m": null,
+        "cloud_oktas": 7,
+        "cloud_type": "-",
+        "cloud_type_id": 30,
+        "delta_t": 2.2,
+        "gust_kmh": null,
+        "gust_kt": null,
+        "air_temp": 18.1,
+        "dewpt": 14.3,
+        "press": null,
+        "press_msl": null,
+        "press_qnh": null,
+        "press_tend": "-",
+        "rain_trace": "0.0",
+        "rel_hum": 78,
+        "sea_state": "-",
+        "swell_dir_worded": "-",
+        "swell_height": null,
+        "swell_period": null,
+        "vis_km": "40",
+        "weather": "Fine",
+        "wind_dir": "NNW",
+        "wind_spd_kmh": 15,
+        "wind_spd_kt": 8
+      }
+    ]
+  },
+  "custom_meta": {
+    "region": "SA",
+    "station_name": "Mount Barker",
+    "importance_rank": 6,
+    "is_major_hub": false
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "observations": {
+    "notice": [
+      {
+        "copyright": "Copyright Commonwealth of Australia 2026, Bureau of Meteorology. For more information see: http://www.bom.gov.au/other/copyright.shtml http://www.bom.gov.au/other/disclaimer.shtml",
+        "copyright_url": "http://www.bom.gov.au/other/copyright.shtml",
+        "disclaimer_url": "http://www.bom.gov.au/other/disclaimer.shtml",
+        "feedback_url": "http://www.bom.gov.au/other/feedback"
+      }
+    ],
+    "header": [
+      {
+        "refresh_message": "Issued at 10:43 am EST Sunday 17 May 2026",
+        "ID": "IDN60801",
+        "main_ID": "IDN60800",
+        "name": "Dorrigo",
+        "state_time_zone": "NSW",
+        "time_zone": "EST",
+        "product_name": "Weather Observations",
+        "state": "New South Wales"
+      }
+    ],
+    "data": [
+      {
+        "sort_order": 0,
+        "wmo": 94789,
+        "name": "Dorrigo",
+        "history_product": "IDN60801",
+        "local_date_time": "16/09:00am",
+        "local_date_time_full": "20260516090000",
+        "aifstime_utc": "20260515230000",
+        "lat": -30.3,
+        "lon": 152.7,
+        "apparent_t": 13.9,
+        "cloud": "Mostly cloudy",
+        "cloud_base_m": null,
+        "cloud_oktas": 7,
+        "cloud_type": "-",
+        "cloud_type_id": null,
+        "delta_t": 0.6,
+        "gust_kmh": null,
+        "gust_kt": null,
+        "air_temp": 14.1,
+        "dewpt": 13.1,
+        "press": null,
+        "press_msl": null,
+        "press_qnh": null,
+        "press_tend": "-",
+        "rain_trace": "10.0",
+        "rel_hum": 94,
+        "sea_state": "-",
+        "swell_dir_worded": "-",
+        "swell_height": null,
+        "swell_period": null,
+        "vis_km": "5",
+        "weather": "Mist",
+        "wind_dir": "SSW",
+        "wind_spd_kmh": 6,
+        "wind_spd_kt": 3
+      },
+      {
+        "sort_order": 1,
+        "wmo": 94789,
+        "name": "Dorrigo",
+        "history_product": "IDN60801",
+        "local_date_time": "15/09:00am",
+        "local_date_time_full": "20260515090000",
+        "aifstime_utc": "20260514230000",
+        "lat": -30.3,
+        "lon": 152.7,
+        "apparent_t": 13.8,
+        "cloud": "Mostly cloudy",
+        "cloud_base_m": null,
+        "cloud_oktas": 7,
+        "cloud_type": "-",
+        "cloud_type_id": null,
+        "delta_t": 0.3,
+        "gust_kmh": null,
+        "gust_kt": null,
+        "air_temp": 13.6,
+        "dewpt": 13.1,
+        "press": null,
+        "press_msl": null,
+        "press_qnh": null,
+        "press_tend": "-",
+        "rain_trace": "17.0",
+        "rel_hum": 97,
+        "sea_state": "-",
+        "swell_dir_worded": "-",
+        "swell_height": null,
+        "swell_period": null,
+        "vis_km": "6",
+        "weather": "Mist",
+        "wind_dir": "S",
+        "wind_spd_kmh": 4,
+        "wind_spd_kt": 2
+      }
+    ]
+  },
+  "custom_meta": {
+    "region": "NSW",
+    "station_name": "Dorrigo",
+    "importance_rank": 12,
+    "is_major_hub": false
+  }
+}

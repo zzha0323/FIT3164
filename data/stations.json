@@ -1,0 +1,4586 @@
+[
+  {
+    "id": "94839",
+    "region": "VIC",
+    "name": "Charlton",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94838",
+    "region": "VIC",
+    "name": "Hopetoun Airport",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94844",
+    "region": "VIC",
+    "name": "Kerang",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94693",
+    "region": "VIC",
+    "name": "Mildura",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94843",
+    "region": "VIC",
+    "name": "Swan Hill",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95831",
+    "region": "VIC",
+    "name": "Walpeup",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95832",
+    "region": "VIC",
+    "name": "Edenhope",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95839",
+    "region": "VIC",
+    "name": "Horsham",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95835",
+    "region": "VIC",
+    "name": "Longerenong",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94827",
+    "region": "VIC",
+    "name": "Nhill Aerodrome",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94836",
+    "region": "VIC",
+    "name": "Stawell",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94920",
+    "region": "VIC",
+    "name": "Warracknabeal Airport",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94834",
+    "region": "VIC",
+    "name": "Ararat",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94835",
+    "region": "VIC",
+    "name": "Ben Nevis",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94826",
+    "region": "VIC",
+    "name": "Cape Nelson",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94842",
+    "region": "VIC",
+    "name": "Cape Otway",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95825",
+    "region": "VIC",
+    "name": "Casterton",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95822",
+    "region": "VIC",
+    "name": "Dartmoor",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94829",
+    "region": "VIC",
+    "name": "Hamilton",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94840",
+    "region": "VIC",
+    "name": "Mortlake",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95845",
+    "region": "VIC",
+    "name": "Mount Gellibrand",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94833",
+    "region": "VIC",
+    "name": "Mount William",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94830",
+    "region": "VIC",
+    "name": "Port Fairy",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94828",
+    "region": "VIC",
+    "name": "Portland Airport",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95826",
+    "region": "VIC",
+    "name": "Portland Harbour",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94837",
+    "region": "VIC",
+    "name": "Warrnambool",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95840",
+    "region": "VIC",
+    "name": "Westmere",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94846",
+    "region": "VIC",
+    "name": "Aireys Inlet",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94854",
+    "region": "VIC",
+    "name": "Avalon",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94852",
+    "region": "VIC",
+    "name": "Ballarat",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94898",
+    "region": "VIC",
+    "name": "Cerberus",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94864",
+    "region": "VIC",
+    "name": "Coldstream",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95866",
+    "region": "VIC",
+    "name": "Essendon Airport",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95872",
+    "region": "VIC",
+    "name": "Fawkner Beacon",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94872",
+    "region": "VIC",
+    "name": "Ferny Creek",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94876",
+    "region": "VIC",
+    "name": "Frankston (Ballam Park)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94871",
+    "region": "VIC",
+    "name": "Frankston Beach",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94857",
+    "region": "VIC",
+    "name": "Geelong Racecourse",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94865",
+    "region": "VIC",
+    "name": "Laverton",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94866",
+    "region": "VIC",
+    "name": "Melbourne Airport",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95936",
+    "region": "VIC",
+    "name": "Melbourne (Olympic Park)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94870",
+    "region": "VIC",
+    "name": "Moorabbin Airport",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95941",
+    "region": "VIC",
+    "name": "Point Cook",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94847",
+    "region": "VIC",
+    "name": "Point Wilson",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94886",
+    "region": "VIC",
+    "name": "Pound Creek",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94892",
+    "region": "VIC",
+    "name": "Rhyll",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95867",
+    "region": "VIC",
+    "name": "Scoresby",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94863",
+    "region": "VIC",
+    "name": "She Oaks",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94853",
+    "region": "VIC",
+    "name": "South Channel Island",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95864",
+    "region": "VIC",
+    "name": "St Kilda Harbour RMYS",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95874",
+    "region": "VIC",
+    "name": "Viewbank",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94855",
+    "region": "VIC",
+    "name": "Bendigo",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94861",
+    "region": "VIC",
+    "name": "Echuca",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95833",
+    "region": "VIC",
+    "name": "Kyabram",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94874",
+    "region": "VIC",
+    "name": "Mangalore",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94859",
+    "region": "VIC",
+    "name": "Redesdale",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94875",
+    "region": "VIC",
+    "name": "Shepparton",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95843",
+    "region": "VIC",
+    "name": "Strathbogie",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95836",
+    "region": "VIC",
+    "name": "Tatura",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94862",
+    "region": "VIC",
+    "name": "Yarrawonga",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95896",
+    "region": "VIC",
+    "name": "Albury",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94884",
+    "region": "VIC",
+    "name": "Benalla",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94903",
+    "region": "VIC",
+    "name": "Falls Creek",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94878",
+    "region": "VIC",
+    "name": "Hunters Hill",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94894",
+    "region": "VIC",
+    "name": "Mount Buller",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94905",
+    "region": "VIC",
+    "name": "Mount Hotham Airport",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94906",
+    "region": "VIC",
+    "name": "Mount Hotham",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95837",
+    "region": "VIC",
+    "name": "Rutherglen",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94889",
+    "region": "VIC",
+    "name": "Wangaratta",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94881",
+    "region": "VIC",
+    "name": "Eildon Fire Tower",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94860",
+    "region": "VIC",
+    "name": "Kilmore Gap",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94882",
+    "region": "VIC",
+    "name": "Lake Eildon",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94849",
+    "region": "VIC",
+    "name": "Maryborough",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94858",
+    "region": "VIC",
+    "name": "Puckapunyal-Lyon Hill (Defence)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94856",
+    "region": "VIC",
+    "name": "Puckapunyal West (Defence)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95907",
+    "region": "VIC",
+    "name": "East Sale Airport",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94949",
+    "region": "VIC",
+    "name": "Hogan Island",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94891",
+    "region": "VIC",
+    "name": "Latrobe Valley",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95901",
+    "region": "VIC",
+    "name": "Mount Baw Baw",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95913",
+    "region": "VIC",
+    "name": "Mount Moornapa",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99806",
+    "region": "VIC",
+    "name": "Warragul (Nilma North)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94893",
+    "region": "VIC",
+    "name": "Wilsons Promontory",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95890",
+    "region": "VIC",
+    "name": "Yarram Airport",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94912",
+    "region": "VIC",
+    "name": "Bairnsdale",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94914",
+    "region": "VIC",
+    "name": "Combienbar",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94933",
+    "region": "VIC",
+    "name": "Gabo Island",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94913",
+    "region": "VIC",
+    "name": "Gelantipy",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95904",
+    "region": "VIC",
+    "name": "Lakes Entrance",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94935",
+    "region": "VIC",
+    "name": "Mallacoota",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94930",
+    "region": "VIC",
+    "name": "Mount Nowa Nowa",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94908",
+    "region": "VIC",
+    "name": "Omeo",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "95918",
+    "region": "VIC",
+    "name": "Orbost",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99813",
+    "region": "VIC",
+    "name": "Cressy (CFA)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99815",
+    "region": "VIC",
+    "name": "Wycheproof (CFA)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99820",
+    "region": "VIC",
+    "name": "Ballan (CFA)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99821",
+    "region": "VIC",
+    "name": "Trentham East (CFA)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99822",
+    "region": "VIC",
+    "name": "Glenburn (CFA)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99826",
+    "region": "VIC",
+    "name": "Gerangamete (CFA)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99827",
+    "region": "VIC",
+    "name": "Mt Burnett (CFA)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99901",
+    "region": "VIC",
+    "name": "Victoria Portable AWS N (CFA)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99795",
+    "region": "VIC",
+    "name": "PORTABLE VPHA (DELWP)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "99796",
+    "region": "VIC",
+    "name": "PORTABLE VPHB (DELWP)",
+    "prod": "IDV60801"
+  },
+  {
+    "id": "94596",
+    "region": "NSW",
+    "name": "Ballina",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94599",
+    "region": "NSW",
+    "name": "Cape Byron",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94573",
+    "region": "NSW",
+    "name": "Casino",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94592",
+    "region": "NSW",
+    "name": "Coolangatta",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94598",
+    "region": "NSW",
+    "name": "Evans Head",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95571",
+    "region": "NSW",
+    "name": "Grafton AgRS",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95570",
+    "region": "NSW",
+    "name": "Grafton Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94572",
+    "region": "NSW",
+    "name": "Lismore Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94582",
+    "region": "NSW",
+    "name": "Murwillumbah",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94589",
+    "region": "NSW",
+    "name": "Yamba",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95729",
+    "region": "NSW",
+    "name": "Coffs Harbour Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94789",
+    "region": "NSW",
+    "name": "Dorrigo",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94785",
+    "region": "NSW",
+    "name": "Kempsey Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94783",
+    "region": "NSW",
+    "name": "Mount Seaview",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94799",
+    "region": "NSW",
+    "name": "Port Macquarie Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95784",
+    "region": "NSW",
+    "name": "Taree Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95771",
+    "region": "NSW",
+    "name": "Cessnock Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94782",
+    "region": "NSW",
+    "name": "Gosford",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95767",
+    "region": "NSW",
+    "name": "Lake Macquarie - Cooranbong",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94650",
+    "region": "NSW",
+    "name": "Maitland Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95774",
+    "region": "NSW",
+    "name": "Mangrove Mountain",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95754",
+    "region": "NSW",
+    "name": "Merriwa",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94758",
+    "region": "NSW",
+    "name": "Murrurundi",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95747",
+    "region": "NSW",
+    "name": "Murrurundi Gap",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94774",
+    "region": "NSW",
+    "name": "Newcastle Nobbys",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95770",
+    "region": "NSW",
+    "name": "Norah Head",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95758",
+    "region": "NSW",
+    "name": "Scone Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99738",
+    "region": "NSW",
+    "name": "Singleton (Defence)",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94775",
+    "region": "NSW",
+    "name": "Tocal",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94776",
+    "region": "NSW",
+    "name": "Williamtown",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94773",
+    "region": "NSW",
+    "name": "Armidale",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95773",
+    "region": "NSW",
+    "name": "Armidale Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94588",
+    "region": "NSW",
+    "name": "Glen Innes Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94772",
+    "region": "NSW",
+    "name": "Guyra",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95541",
+    "region": "NSW",
+    "name": "Inverell",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94541",
+    "region": "NSW",
+    "name": "Inverell RS",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94553",
+    "region": "NSW",
+    "name": "Applethorpe",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94587",
+    "region": "NSW",
+    "name": "Tabulam",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94556",
+    "region": "NSW",
+    "name": "Tenterfield",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94752",
+    "region": "NSW",
+    "name": "Badgerys Creek",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94765",
+    "region": "NSW",
+    "name": "Bankstown",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94755",
+    "region": "NSW",
+    "name": "Camden",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94757",
+    "region": "NSW",
+    "name": "Campbelltown",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94766",
+    "region": "NSW",
+    "name": "Canterbury",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94769",
+    "region": "NSW",
+    "name": "Fort Denison",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95761",
+    "region": "NSW",
+    "name": "Holsworthy",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95684",
+    "region": "NSW",
+    "name": "Holsworthy (Defence)",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94760",
+    "region": "NSW",
+    "name": "Horsley Park",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95756",
+    "region": "NSW",
+    "name": "Kurnell",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94780",
+    "region": "NSW",
+    "name": "Little Bay",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95757",
+    "region": "NSW",
+    "name": "Lucas Heights (ANSTO)",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95768",
+    "region": "NSW",
+    "name": "North Head",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94764",
+    "region": "NSW",
+    "name": "Parramatta",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94763",
+    "region": "NSW",
+    "name": "Penrith",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95753",
+    "region": "NSW",
+    "name": "Richmond",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94767",
+    "region": "NSW",
+    "name": "Sydney Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94768",
+    "region": "NSW",
+    "name": "Sydney - Observatory Hill",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95766",
+    "region": "NSW",
+    "name": "Sydney Harbour",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95765",
+    "region": "NSW",
+    "name": "Sydney Olympic Park",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94759",
+    "region": "NSW",
+    "name": "Terrey Hills",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95752",
+    "region": "NSW",
+    "name": "Wattamolla",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95748",
+    "region": "NSW",
+    "name": "Albion Park",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94749",
+    "region": "NSW",
+    "name": "Bellambi",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99742",
+    "region": "NSW",
+    "name": "High Range (Wanganderry)",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94751",
+    "region": "NSW",
+    "name": "Jervis Bay Airfield",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95749",
+    "region": "NSW",
+    "name": "Kiama",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94746",
+    "region": "NSW",
+    "name": "Moss Vale",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94750",
+    "region": "NSW",
+    "name": "Nowra",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95940",
+    "region": "NSW",
+    "name": "Point Perpendicular",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95745",
+    "region": "NSW",
+    "name": "Port Kembla Harbour",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95931",
+    "region": "NSW",
+    "name": "Bega",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94934",
+    "region": "NSW",
+    "name": "Green Cape",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95929",
+    "region": "NSW",
+    "name": "Merimbula",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94939",
+    "region": "NSW",
+    "name": "Montague Island",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95937",
+    "region": "NSW",
+    "name": "Moruya Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94937",
+    "region": "NSW",
+    "name": "Moruya Heads",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95935",
+    "region": "NSW",
+    "name": "Narooma",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94938",
+    "region": "NSW",
+    "name": "Ulladulla",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94729",
+    "region": "NSW",
+    "name": "Bathurst Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94158",
+    "region": "NSW",
+    "name": "Bathurst Agricultural Station",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94744",
+    "region": "NSW",
+    "name": "Katoomba",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94741",
+    "region": "NSW",
+    "name": "Lithgow",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95686",
+    "region": "NSW",
+    "name": "Marrangaroo (Defence)",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94743",
+    "region": "NSW",
+    "name": "Mount Boyce",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94727",
+    "region": "NSW",
+    "name": "Mudgee",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94754",
+    "region": "NSW",
+    "name": "Nullo Mountain",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95726",
+    "region": "NSW",
+    "name": "Orange Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94927",
+    "region": "NSW",
+    "name": "Braidwood",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94926",
+    "region": "NSW",
+    "name": "Canberra",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94716",
+    "region": "NSW",
+    "name": "Goulburn",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95716",
+    "region": "NSW",
+    "name": "Goulburn Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95925",
+    "region": "NSW",
+    "name": "Mount Ginini",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94943",
+    "region": "NSW",
+    "name": "Nerriga",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94925",
+    "region": "NSW",
+    "name": "Tuggeranong",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94928",
+    "region": "NSW",
+    "name": "Bombala",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94929",
+    "region": "NSW",
+    "name": "Bombala AWS",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95916",
+    "region": "NSW",
+    "name": "Cabramurra",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94923",
+    "region": "NSW",
+    "name": "Cooma",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94921",
+    "region": "NSW",
+    "name": "Cooma Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94915",
+    "region": "NSW",
+    "name": "Perisher Valley",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95909",
+    "region": "NSW",
+    "name": "Thredbo Top Station",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95908",
+    "region": "NSW",
+    "name": "Thredbo Village",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94761",
+    "region": "NSW",
+    "name": "Barraba",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99468",
+    "region": "NSW",
+    "name": "Goondiwindi",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95740",
+    "region": "NSW",
+    "name": "Gunnedah Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94740",
+    "region": "NSW",
+    "name": "Gunnedah Resource Centre",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95527",
+    "region": "NSW",
+    "name": "Moree",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94520",
+    "region": "NSW",
+    "name": "Mungindi",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95734",
+    "region": "NSW",
+    "name": "Narrabri",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95762",
+    "region": "NSW",
+    "name": "Tamworth Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95715",
+    "region": "NSW",
+    "name": "Walgett",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94792",
+    "region": "NSW",
+    "name": "Woolbrook",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94793",
+    "region": "NSW",
+    "name": "Brewon",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95708",
+    "region": "NSW",
+    "name": "Condobolin Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94728",
+    "region": "NSW",
+    "name": "Coonabarabran",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95728",
+    "region": "NSW",
+    "name": "Coonabarabran Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95718",
+    "region": "NSW",
+    "name": "Coonamble",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95721",
+    "region": "NSW",
+    "name": "Cowra",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95719",
+    "region": "NSW",
+    "name": "Dubbo",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94715",
+    "region": "NSW",
+    "name": "Forbes",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94794",
+    "region": "NSW",
+    "name": "Girilambone",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94725",
+    "region": "NSW",
+    "name": "Grenfell",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95717",
+    "region": "NSW",
+    "name": "Parkes Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95722",
+    "region": "NSW",
+    "name": "Temora",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95710",
+    "region": "NSW",
+    "name": "Trangie",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95709",
+    "region": "NSW",
+    "name": "West Wyalong",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94714",
+    "region": "NSW",
+    "name": "Cootamundra",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94919",
+    "region": "NSW",
+    "name": "Khancoban",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94918",
+    "region": "NSW",
+    "name": "Tumbarumba",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94712",
+    "region": "NSW",
+    "name": "Young",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95895",
+    "region": "NSW",
+    "name": "Corowa",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95869",
+    "region": "NSW",
+    "name": "Deniliquin",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95704",
+    "region": "NSW",
+    "name": "Griffith",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94702",
+    "region": "NSW",
+    "name": "Hay Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94901",
+    "region": "NSW",
+    "name": "Hume Reservoir",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94944",
+    "region": "NSW",
+    "name": "Kapooka (Defence)",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95706",
+    "region": "NSW",
+    "name": "Narrandera Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94910",
+    "region": "NSW",
+    "name": "Wagga Wagga",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95705",
+    "region": "NSW",
+    "name": "Yanco",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94691",
+    "region": "NSW",
+    "name": "Broken Hill Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95697",
+    "region": "NSW",
+    "name": "Ivanhoe Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94692",
+    "region": "NSW",
+    "name": "Lake Victoria",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95682",
+    "region": "NSW",
+    "name": "Mount Hope",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95692",
+    "region": "NSW",
+    "name": "Pooncarie",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94407",
+    "region": "NSW",
+    "name": "Borrona Downs",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94703",
+    "region": "NSW",
+    "name": "Bourke",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95512",
+    "region": "NSW",
+    "name": "Brewarrina",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94711",
+    "region": "NSW",
+    "name": "Cobar",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94710",
+    "region": "NSW",
+    "name": "Cobar Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94686",
+    "region": "NSW",
+    "name": "Fowlers Gap",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94498",
+    "region": "NSW",
+    "name": "Lightning Ridge",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94798",
+    "region": "NSW",
+    "name": "Noona",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94796",
+    "region": "NSW",
+    "name": "Smithville",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95485",
+    "region": "NSW",
+    "name": "Tibooburra Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94497",
+    "region": "NSW",
+    "name": "Wanaaring",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95699",
+    "region": "NSW",
+    "name": "White Cliffs AWS",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95695",
+    "region": "NSW",
+    "name": "Wilcannia Airport",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94995",
+    "region": "NSW",
+    "name": "Lord Howe Island",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "95995",
+    "region": "NSW",
+    "name": "Lord Howe Island Windy Point",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94996",
+    "region": "NSW",
+    "name": "Norfolk Island",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99999",
+    "region": "NSW",
+    "name": "PORTABLE NPWS NSW02",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99143",
+    "region": "NSW",
+    "name": "PORTABLE NPWS NSW04",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99152",
+    "region": "NSW",
+    "name": "PORTABLE NPWS NSW05",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99762",
+    "region": "NSW",
+    "name": "Tidbinbilla",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99763",
+    "region": "NSW",
+    "name": "Mullion",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99764",
+    "region": "NSW",
+    "name": "Kowen Forest",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99765",
+    "region": "NSW",
+    "name": "Gudgenby",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99145",
+    "region": "NSW",
+    "name": "ACT PCS1",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99146",
+    "region": "NSW",
+    "name": "ACT PCS2",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99946",
+    "region": "NSW",
+    "name": "ACT PCS3",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99071",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW01",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99072",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW02",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99752",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW10",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99753",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW11",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99786",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW15",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99790",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW16",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99134",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW21",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99998",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW51",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99791",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW52",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99792",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW53",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99793",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW54",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99825",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW58",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99598",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW59",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99597",
+    "region": "NSW",
+    "name": "PORTABLE RFSNSW60",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "99129",
+    "region": "NSW",
+    "name": "PORTABLE WN01 (Water NSW)",
+    "prod": "IDN60801"
+  },
+  {
+    "id": "94182",
+    "region": "QLD",
+    "name": "Coconut Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94183",
+    "region": "QLD",
+    "name": "Coen Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94174",
+    "region": "QLD",
+    "name": "Horn Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94186",
+    "region": "QLD",
+    "name": "Lockhart River",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94276",
+    "region": "QLD",
+    "name": "Palmerville",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94171",
+    "region": "QLD",
+    "name": "Scherger",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94181",
+    "region": "QLD",
+    "name": "Thursday Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94170",
+    "region": "QLD",
+    "name": "Weipa",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94260",
+    "region": "QLD",
+    "name": "Burketown Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94268",
+    "region": "QLD",
+    "name": "Kowanyama",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94254",
+    "region": "QLD",
+    "name": "Mornington Island Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94266",
+    "region": "QLD",
+    "name": "Normanton",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94257",
+    "region": "QLD",
+    "name": "Sweers Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94261",
+    "region": "QLD",
+    "name": "Century Mine",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94115",
+    "region": "QLD",
+    "name": "Charters Towers Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94274",
+    "region": "QLD",
+    "name": "Georgetown Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94343",
+    "region": "QLD",
+    "name": "Hughenden",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94341",
+    "region": "QLD",
+    "name": "Richmond",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94284",
+    "region": "QLD",
+    "name": "Arlington Reef",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94287",
+    "region": "QLD",
+    "name": "Cairns",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94288",
+    "region": "QLD",
+    "name": "Cairns Racecourse",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94188",
+    "region": "QLD",
+    "name": "Cape Flattery",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94292",
+    "region": "QLD",
+    "name": "Cardwell",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95283",
+    "region": "QLD",
+    "name": "Cooktown",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99218",
+    "region": "QLD",
+    "name": "Cowley Beach (Defence)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94280",
+    "region": "QLD",
+    "name": "Innisfail Aero",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94285",
+    "region": "QLD",
+    "name": "Low Isles",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94295",
+    "region": "QLD",
+    "name": "Lucinda",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95286",
+    "region": "QLD",
+    "name": "Mareeba",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95292",
+    "region": "QLD",
+    "name": "South Johnstone",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95296",
+    "region": "QLD",
+    "name": "Alva Beach",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95295",
+    "region": "QLD",
+    "name": "Ayr",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94383",
+    "region": "QLD",
+    "name": "Bowen Airport AWS",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94004",
+    "region": "QLD",
+    "name": "Ingham Aerodrome",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94272",
+    "region": "QLD",
+    "name": "Mount Stuart (Defence)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94294",
+    "region": "QLD",
+    "name": "Townsville",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94271",
+    "region": "QLD",
+    "name": "Townsville Air Weapons Range (Defence)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94273",
+    "region": "QLD",
+    "name": "Townsville - Fanning River (Defence)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95293",
+    "region": "QLD",
+    "name": "Woolshed",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94360",
+    "region": "QLD",
+    "name": "Collinsville",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94368",
+    "region": "QLD",
+    "name": "Hamilton Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94367",
+    "region": "QLD",
+    "name": "Mackay",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95367",
+    "region": "QLD",
+    "name": "Mackay Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94352",
+    "region": "QLD",
+    "name": "Mackay Racecourse",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94372",
+    "region": "QLD",
+    "name": "Middle Percy Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94365",
+    "region": "QLD",
+    "name": "Proserpine Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94376",
+    "region": "QLD",
+    "name": "Biloela",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94380",
+    "region": "QLD",
+    "name": "Gladstone",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94381",
+    "region": "QLD",
+    "name": "Gladstone Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94386",
+    "region": "QLD",
+    "name": "Heron Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94374",
+    "region": "QLD",
+    "name": "Rockhampton",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95298",
+    "region": "QLD",
+    "name": "Rosslyn Bay Harbour",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94378",
+    "region": "QLD",
+    "name": "Rundle Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95369",
+    "region": "QLD",
+    "name": "St Lawrence",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95370",
+    "region": "QLD",
+    "name": "Williamson",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94370",
+    "region": "QLD",
+    "name": "Samuel Hill",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94373",
+    "region": "QLD",
+    "name": "Yeppoon",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94398",
+    "region": "QLD",
+    "name": "Blackwater Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94395",
+    "region": "QLD",
+    "name": "Clermont Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94363",
+    "region": "QLD",
+    "name": "Emerald",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94399",
+    "region": "QLD",
+    "name": "Lochington",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94397",
+    "region": "QLD",
+    "name": "Moranbah Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94396",
+    "region": "QLD",
+    "name": "Rolleston Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95362",
+    "region": "QLD",
+    "name": "Springsure",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94525",
+    "region": "QLD",
+    "name": "Taroom",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94350",
+    "region": "QLD",
+    "name": "Barcaldine",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95351",
+    "region": "QLD",
+    "name": "Blackall",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94345",
+    "region": "QLD",
+    "name": "Isisford",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94346",
+    "region": "QLD",
+    "name": "Longreach",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94355",
+    "region": "QLD",
+    "name": "Tambo",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94342",
+    "region": "QLD",
+    "name": "Winton",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94255",
+    "region": "QLD",
+    "name": "Camooweal",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94347",
+    "region": "QLD",
+    "name": "Carters Bore",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94335",
+    "region": "QLD",
+    "name": "Cloncurry",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94337",
+    "region": "QLD",
+    "name": "Julia Creek",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94332",
+    "region": "QLD",
+    "name": "Mount Isa",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94349",
+    "region": "QLD",
+    "name": "New May Downs",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94336",
+    "region": "QLD",
+    "name": "The Monument",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94338",
+    "region": "QLD",
+    "name": "Trepell",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94344",
+    "region": "QLD",
+    "name": "Urandangi",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95487",
+    "region": "QLD",
+    "name": "Ballera",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94333",
+    "region": "QLD",
+    "name": "Boulia",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95482",
+    "region": "QLD",
+    "name": "Birdsville",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95492",
+    "region": "QLD",
+    "name": "Thargomindah",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94489",
+    "region": "QLD",
+    "name": "Windorah",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94510",
+    "region": "QLD",
+    "name": "Charleville",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94500",
+    "region": "QLD",
+    "name": "Cunnamulla",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94511",
+    "region": "QLD",
+    "name": "Injune",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94514",
+    "region": "QLD",
+    "name": "Mitchell",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94515",
+    "region": "QLD",
+    "name": "Roma",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94517",
+    "region": "QLD",
+    "name": "St George",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94521",
+    "region": "QLD",
+    "name": "Surat",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94542",
+    "region": "QLD",
+    "name": "Dalby",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95529",
+    "region": "QLD",
+    "name": "Miles",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94552",
+    "region": "QLD",
+    "name": "Oakey",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94550",
+    "region": "QLD",
+    "name": "Stanthorpe",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95533",
+    "region": "QLD",
+    "name": "Texas",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95551",
+    "region": "QLD",
+    "name": "Toowoomba",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94555",
+    "region": "QLD",
+    "name": "Warwick",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99435",
+    "region": "QLD",
+    "name": "Wellcamp Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94387",
+    "region": "QLD",
+    "name": "Bundaberg",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94584",
+    "region": "QLD",
+    "name": "Double Island Point",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95543",
+    "region": "QLD",
+    "name": "Gayndah",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94566",
+    "region": "QLD",
+    "name": "Gympie",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95565",
+    "region": "QLD",
+    "name": "Hervey Bay",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94549",
+    "region": "QLD",
+    "name": "Kingaroy",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94388",
+    "region": "QLD",
+    "name": "Lady Elliot Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94567",
+    "region": "QLD",
+    "name": "Maryborough",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94384",
+    "region": "QLD",
+    "name": "Seventeen Seventy",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94420",
+    "region": "QLD",
+    "name": "Tin Can Bay (Defence)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94568",
+    "region": "QLD",
+    "name": "Amberley",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94575",
+    "region": "QLD",
+    "name": "Archerfield",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94591",
+    "region": "QLD",
+    "name": "Banana Bank",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95566",
+    "region": "QLD",
+    "name": "Beerburrum",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95575",
+    "region": "QLD",
+    "name": "Beaudesert AWS",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94576",
+    "region": "QLD",
+    "name": "Brisbane",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94578",
+    "region": "QLD",
+    "name": "Brisbane Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94418",
+    "region": "QLD",
+    "name": "Canungra (Defence)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94594",
+    "region": "QLD",
+    "name": "Cape Moreton",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94562",
+    "region": "QLD",
+    "name": "Gatton",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94580",
+    "region": "QLD",
+    "name": "Gold Coast Seaway",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94419",
+    "region": "QLD",
+    "name": "Greenbank (Defence)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99497",
+    "region": "QLD",
+    "name": "Hope Banks Beacon",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94590",
+    "region": "QLD",
+    "name": "Inner Beacon",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95572",
+    "region": "QLD",
+    "name": "Nambour",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99496",
+    "region": "QLD",
+    "name": "North West 10 Beacon",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94593",
+    "region": "QLD",
+    "name": "Point Lookout",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94561",
+    "region": "QLD",
+    "name": "Redland (Alexandra Hills)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94569",
+    "region": "QLD",
+    "name": "Sunshine Coast Airport",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94570",
+    "region": "QLD",
+    "name": "Tewantin",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "95288",
+    "region": "QLD",
+    "name": "Bougainville Reef",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94394",
+    "region": "QLD",
+    "name": "Cato Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94371",
+    "region": "QLD",
+    "name": "Creal Reef",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94290",
+    "region": "QLD",
+    "name": "Flinders Reef",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94393",
+    "region": "QLD",
+    "name": "Frederick Reef",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94379",
+    "region": "QLD",
+    "name": "Gannett Cay",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94293",
+    "region": "QLD",
+    "name": "Lihou Reef Lighthouse",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94298",
+    "region": "QLD",
+    "name": "Marion Reef",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94299",
+    "region": "QLD",
+    "name": "Willis Island",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99082",
+    "region": "QLD",
+    "name": "PORTABLE QFRA BR",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99112",
+    "region": "QLD",
+    "name": "PORTABLE QFRD SWR",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99122",
+    "region": "QLD",
+    "name": "PORTABLE QFRI (Inglewood)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99123",
+    "region": "QLD",
+    "name": "PORTABLE QFRJ (North Tamborine)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99124",
+    "region": "QLD",
+    "name": "PORTABLE QFRK (Ravenshoe)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99125",
+    "region": "QLD",
+    "name": "PORTABLE QFRL (Mt Fox)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "99128",
+    "region": "QLD",
+    "name": "PORTABLE QFRM (Anduramba)",
+    "prod": "IDQ60801"
+  },
+  {
+    "id": "94210",
+    "region": "WA",
+    "name": "Adele Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94203",
+    "region": "WA",
+    "name": "Broome",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95202",
+    "region": "WA",
+    "name": "Broome Port",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94204",
+    "region": "WA",
+    "name": "Curtin",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94201",
+    "region": "WA",
+    "name": "Cygnet Bay",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94215",
+    "region": "WA",
+    "name": "Doongan",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94206",
+    "region": "WA",
+    "name": "Fitzroy Crossing",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94212",
+    "region": "WA",
+    "name": "Halls Creek",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94100",
+    "region": "WA",
+    "name": "Kalumburu",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99200",
+    "region": "WA",
+    "name": "Koolan Island / Koolan Central",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94216",
+    "region": "WA",
+    "name": "Kununurra Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99206",
+    "region": "WA",
+    "name": "Lombadina",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94200",
+    "region": "WA",
+    "name": "Mandora",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94207",
+    "region": "WA",
+    "name": "Rowley Shoals",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94102",
+    "region": "WA",
+    "name": "Troughton Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95101",
+    "region": "WA",
+    "name": "Truscott",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95214",
+    "region": "WA",
+    "name": "Wyndham Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95208",
+    "region": "WA",
+    "name": "Yampi Sound (Defence)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99313",
+    "region": "WA",
+    "name": "Barimunya",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95304",
+    "region": "WA",
+    "name": "Barrow Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94310",
+    "region": "WA",
+    "name": "Bedout Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99310",
+    "region": "WA",
+    "name": "Boolgeeda",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99737",
+    "region": "WA",
+    "name": "Christmas Creek",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99312",
+    "region": "WA",
+    "name": "Coondewanna",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99593",
+    "region": "WA",
+    "name": "Eliwana Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99736",
+    "region": "WA",
+    "name": "Fortescue Dave Forrest",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99366",
+    "region": "WA",
+    "name": "Iron Bridge Mine",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94330",
+    "region": "WA",
+    "name": "Karijini North",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95307",
+    "region": "WA",
+    "name": "Karratha",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99594",
+    "region": "WA",
+    "name": "Gudai-Darri Mine",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94302",
+    "region": "WA",
+    "name": "Learmonth",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94307",
+    "region": "WA",
+    "name": "Legendre Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95317",
+    "region": "WA",
+    "name": "Marble Bar",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94306",
+    "region": "WA",
+    "name": "Mardie",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94317",
+    "region": "WA",
+    "name": "Newman Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95305",
+    "region": "WA",
+    "name": "Onslow Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94316",
+    "region": "WA",
+    "name": "Paraburdoo",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94311",
+    "region": "WA",
+    "name": "Pardoo",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94312",
+    "region": "WA",
+    "name": "Port Hedland",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94308",
+    "region": "WA",
+    "name": "Roebourne Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99217",
+    "region": "WA",
+    "name": "Solomon Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94319",
+    "region": "WA",
+    "name": "Telfer",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94303",
+    "region": "WA",
+    "name": "Thevenard Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95303",
+    "region": "WA",
+    "name": "Varanus Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99314",
+    "region": "WA",
+    "name": "West Angelas",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94300",
+    "region": "WA",
+    "name": "Carnarvon",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94444",
+    "region": "WA",
+    "name": "Bulga Downs",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99401",
+    "region": "WA",
+    "name": "Golden Grove",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94430",
+    "region": "WA",
+    "name": "Meekatharra",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94429",
+    "region": "WA",
+    "name": "Mount Magnet Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94422",
+    "region": "WA",
+    "name": "Murchison",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94404",
+    "region": "WA",
+    "name": "Paynes Find",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95402",
+    "region": "WA",
+    "name": "Shark Bay Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94637",
+    "region": "WA",
+    "name": "Kalgoorlie-Boulder",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94449",
+    "region": "WA",
+    "name": "Laverton",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95448",
+    "region": "WA",
+    "name": "Leinster",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94450",
+    "region": "WA",
+    "name": "Leonora Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95642",
+    "region": "WA",
+    "name": "Norseman Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95439",
+    "region": "WA",
+    "name": "Wiluna Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94647",
+    "region": "WA",
+    "name": "Eucla",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95646",
+    "region": "WA",
+    "name": "Forrest",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94644",
+    "region": "WA",
+    "name": "Red Rocks Point",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94451",
+    "region": "WA",
+    "name": "Carnegie",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94461",
+    "region": "WA",
+    "name": "Giles*",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94457",
+    "region": "WA",
+    "name": "Warburton",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99015",
+    "region": "WA",
+    "name": "West Musgrave Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "96995",
+    "region": "WA",
+    "name": "Christmas Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "96996",
+    "region": "WA",
+    "name": "Cocos Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94603",
+    "region": "WA",
+    "name": "Badgingarra",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94403",
+    "region": "WA",
+    "name": "Geraldton Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95600",
+    "region": "WA",
+    "name": "Jurien Bay",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94401",
+    "region": "WA",
+    "name": "Kalbarri",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94417",
+    "region": "WA",
+    "name": "Morawa Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94411",
+    "region": "WA",
+    "name": "Mullewa",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94405",
+    "region": "WA",
+    "name": "North Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99254",
+    "region": "WA",
+    "name": "Armament Jetty",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95610",
+    "region": "WA",
+    "name": "Bickley",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99255",
+    "region": "WA",
+    "name": "Colpoys Point",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94620",
+    "region": "WA",
+    "name": "Dwellingup",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95607",
+    "region": "WA",
+    "name": "Garden Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95612",
+    "region": "WA",
+    "name": "Gingin Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94615",
+    "region": "WA",
+    "name": "Gooseberry Hill",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95605",
+    "region": "WA",
+    "name": "Hillarys Point Boat Harbour",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94609",
+    "region": "WA",
+    "name": "Jandakot",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95614",
+    "region": "WA",
+    "name": "Karnet",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95609",
+    "region": "WA",
+    "name": "Lancelin (Defence)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94605",
+    "region": "WA",
+    "name": "Mandurah",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95620",
+    "region": "WA",
+    "name": "Melville Water",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94795",
+    "region": "WA",
+    "name": "Millendon (Swan Valley)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94612",
+    "region": "WA",
+    "name": "Pearce",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94608",
+    "region": "WA",
+    "name": "Perth",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94610",
+    "region": "WA",
+    "name": "Perth Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94602",
+    "region": "WA",
+    "name": "Rottnest Island",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94614",
+    "region": "WA",
+    "name": "Swanbourne",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95632",
+    "region": "WA",
+    "name": "Bridgetown",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94604",
+    "region": "WA",
+    "name": "Bunbury",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95611",
+    "region": "WA",
+    "name": "Busselton Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95602",
+    "region": "WA",
+    "name": "Busselton Jetty",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94601",
+    "region": "WA",
+    "name": "Cape Leeuwin",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94600",
+    "region": "WA",
+    "name": "Cape Naturaliste",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95621",
+    "region": "WA",
+    "name": "Collie East",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95623",
+    "region": "WA",
+    "name": "Jarrahwood",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94617",
+    "region": "WA",
+    "name": "Manjimup",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95617",
+    "region": "WA",
+    "name": "Shannon",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95647",
+    "region": "WA",
+    "name": "Walpole North",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94640",
+    "region": "WA",
+    "name": "Windy Harbour",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95641",
+    "region": "WA",
+    "name": "Witchcliffe West",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94801",
+    "region": "WA",
+    "name": "Albany",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94802",
+    "region": "WA",
+    "name": "Albany Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95636",
+    "region": "WA",
+    "name": "Jacup",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94631",
+    "region": "WA",
+    "name": "Rocky Gully South",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94638",
+    "region": "WA",
+    "name": "Esperance",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95638",
+    "region": "WA",
+    "name": "Esperance Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95648",
+    "region": "WA",
+    "name": "Esperance Harbour",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95635",
+    "region": "WA",
+    "name": "Hopetoun North",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95644",
+    "region": "WA",
+    "name": "Munglinup West",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95639",
+    "region": "WA",
+    "name": "Salmon Gums RS",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94625",
+    "region": "WA",
+    "name": "Brookton",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95627",
+    "region": "WA",
+    "name": "Hyden",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94641",
+    "region": "WA",
+    "name": "Katanning RS",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95637",
+    "region": "WA",
+    "name": "Lake Grace",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94627",
+    "region": "WA",
+    "name": "Narrogin",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94628",
+    "region": "WA",
+    "name": "Newdegate",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95616",
+    "region": "WA",
+    "name": "Pingelly",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95640",
+    "region": "WA",
+    "name": "Wandering",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95615",
+    "region": "WA",
+    "name": "Beverley",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95625",
+    "region": "WA",
+    "name": "Cunderdin Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95629",
+    "region": "WA",
+    "name": "Dalwallinu",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94621",
+    "region": "WA",
+    "name": "Northam",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "95634",
+    "region": "WA",
+    "name": "Southern Cross Airport",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94622",
+    "region": "WA",
+    "name": "Wongan Hills",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94623",
+    "region": "WA",
+    "name": "York",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99150",
+    "region": "WA",
+    "name": "PORTABLE BTSA (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99457",
+    "region": "WA",
+    "name": "PORTABLE BTSB (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99459",
+    "region": "WA",
+    "name": "PORTABLE BTSD (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99404",
+    "region": "WA",
+    "name": "PORTABLE BTSF (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99405",
+    "region": "WA",
+    "name": "PORTABLE BTSG (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99798",
+    "region": "WA",
+    "name": "PORTABLE BTSH (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99013",
+    "region": "WA",
+    "name": "PORTABLE BTSJ (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99361",
+    "region": "WA",
+    "name": "PORTABLE BTSK (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99360",
+    "region": "WA",
+    "name": "PORTABLE BTSL (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99359",
+    "region": "WA",
+    "name": "PORTABLE BTSM (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99358",
+    "region": "WA",
+    "name": "PORTABLE BTSN (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "99363",
+    "region": "WA",
+    "name": "PORTABLE BTSO (DFES)",
+    "prod": "IDW60801"
+  },
+  {
+    "id": "94648",
+    "region": "SA",
+    "name": "Adelaide (West Terrace /  ngayirdapira)",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94146",
+    "region": "SA",
+    "name": "Adelaide Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95676",
+    "region": "SA",
+    "name": "Edinburgh",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94677",
+    "region": "SA",
+    "name": "Hindmarsh Island",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94683",
+    "region": "SA",
+    "name": "Kuitpo",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94806",
+    "region": "SA",
+    "name": "Mount Barker",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94678",
+    "region": "SA",
+    "name": "Mount Crawford",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95678",
+    "region": "SA",
+    "name": "Mount Lofty",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94808",
+    "region": "SA",
+    "name": "Noarlunga",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94681",
+    "region": "SA",
+    "name": "Nuriootpa",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95675",
+    "region": "SA",
+    "name": "Outer Harbor (Black Pole)",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95677",
+    "region": "SA",
+    "name": "Parafield",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94811",
+    "region": "SA",
+    "name": "Parawa West",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95679",
+    "region": "SA",
+    "name": "Sellicks Hill",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94814",
+    "region": "SA",
+    "name": "Strathalbyn",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95811",
+    "region": "SA",
+    "name": "Victor Harbor",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95805",
+    "region": "SA",
+    "name": "Cape Borda",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94822",
+    "region": "SA",
+    "name": "Cape Willoughby",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94809",
+    "region": "SA",
+    "name": "Edithburgh",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94685",
+    "region": "SA",
+    "name": "Kadina",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95807",
+    "region": "SA",
+    "name": "Kingscote",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95659",
+    "region": "SA",
+    "name": "Minlaton Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94807",
+    "region": "SA",
+    "name": "Parndana",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95806",
+    "region": "SA",
+    "name": "Stenhouse Bay",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94666",
+    "region": "SA",
+    "name": "Warburto Point",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94813",
+    "region": "SA",
+    "name": "Cape Jaffa",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94817",
+    "region": "SA",
+    "name": "Coonawarra",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94816",
+    "region": "SA",
+    "name": "Keith",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95815",
+    "region": "SA",
+    "name": "Keith West",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94821",
+    "region": "SA",
+    "name": "Mount Gambier",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94820",
+    "region": "SA",
+    "name": "Naracoorte",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95823",
+    "region": "SA",
+    "name": "Padthaway",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95816",
+    "region": "SA",
+    "name": "Robe Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94690",
+    "region": "SA",
+    "name": "Lameroo AWS",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94682",
+    "region": "SA",
+    "name": "Loxton",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95812",
+    "region": "SA",
+    "name": "Murray Bridge",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95818",
+    "region": "SA",
+    "name": "Pallamana",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95687",
+    "region": "SA",
+    "name": "Renmark Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95667",
+    "region": "SA",
+    "name": "Clare",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94680",
+    "region": "SA",
+    "name": "Eudunda",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94673",
+    "region": "SA",
+    "name": "Hawker",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95666",
+    "region": "SA",
+    "name": "Port Augusta",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "99749",
+    "region": "SA",
+    "name": "Port Pirie Airport AWS",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95671",
+    "region": "SA",
+    "name": "Roseworthy",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95670",
+    "region": "SA",
+    "name": "Snowtown",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94653",
+    "region": "SA",
+    "name": "Ceduna",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94661",
+    "region": "SA",
+    "name": "Cleve",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94662",
+    "region": "SA",
+    "name": "Cleve Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95683",
+    "region": "SA",
+    "name": "Cultana (Defence)",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95663",
+    "region": "SA",
+    "name": "Cummins Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94668",
+    "region": "SA",
+    "name": "Kimba",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94657",
+    "region": "SA",
+    "name": "Kyancutta",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95662",
+    "region": "SA",
+    "name": "Minnipa RS",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94804",
+    "region": "SA",
+    "name": "Neptune Island",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94651",
+    "region": "SA",
+    "name": "Nullarbor",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95649",
+    "region": "SA",
+    "name": "Point Avoid",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95661",
+    "region": "SA",
+    "name": "Port Lincoln Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94654",
+    "region": "SA",
+    "name": "Streaky Bay",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95652",
+    "region": "SA",
+    "name": "Thevenard",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95664",
+    "region": "SA",
+    "name": "Whyalla",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95654",
+    "region": "SA",
+    "name": "Wudinna Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95660",
+    "region": "SA",
+    "name": "Andamooka",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94676",
+    "region": "SA",
+    "name": "Arkaroola",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95458",
+    "region": "SA",
+    "name": "Coober Pedy Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94474",
+    "region": "SA",
+    "name": "Ernabella/Pukatja",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95668",
+    "region": "SA",
+    "name": "Gluepot",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94674",
+    "region": "SA",
+    "name": "Leigh Creek",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95480",
+    "region": "SA",
+    "name": "Marree Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95481",
+    "region": "SA",
+    "name": "Moomba Airport",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94660",
+    "region": "SA",
+    "name": "Mount Ive",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94476",
+    "region": "SA",
+    "name": "Oodnadatta",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "95658",
+    "region": "SA",
+    "name": "Roxby Downs",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94655",
+    "region": "SA",
+    "name": "Tarcoola",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94659",
+    "region": "SA",
+    "name": "Woomera",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94684",
+    "region": "SA",
+    "name": "Yunta",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "99777",
+    "region": "SA",
+    "name": "Portable SA Hotel (CFS)",
+    "prod": "IDS60801"
+  },
+  {
+    "id": "94850",
+    "region": "TAS",
+    "name": "King Island Airport",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95963",
+    "region": "TAS",
+    "name": "Burnie Port",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95954",
+    "region": "TAS",
+    "name": "Kennaook / Cape Grim",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95960",
+    "region": "TAS",
+    "name": "Devonport Airport",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95956",
+    "region": "TAS",
+    "name": "Luncheon Hill",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94950",
+    "region": "TAS",
+    "name": "Marrawah",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94955",
+    "region": "TAS",
+    "name": "Sheffield",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94953",
+    "region": "TAS",
+    "name": "Smithton",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95957",
+    "region": "TAS",
+    "name": "Wynyard",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95970",
+    "region": "TAS",
+    "name": "Cressy",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94969",
+    "region": "TAS",
+    "name": "Launceston",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95966",
+    "region": "TAS",
+    "name": "Launceston Airport",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95964",
+    "region": "TAS",
+    "name": "Low Head",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94980",
+    "region": "TAS",
+    "name": "Flinders Island Airport",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94983",
+    "region": "TAS",
+    "name": "Larapuna (Eddystone Point)",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94972",
+    "region": "TAS",
+    "name": "Scottsdale",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95985",
+    "region": "TAS",
+    "name": "Swan Island",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94985",
+    "region": "TAS",
+    "name": "Ross",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94960",
+    "region": "TAS",
+    "name": "Tunnack",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94974",
+    "region": "TAS",
+    "name": "Cape Sorell",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95961",
+    "region": "TAS",
+    "name": "Low Rocky Point",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94962",
+    "region": "TAS",
+    "name": "Maatsuyker Island",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95952",
+    "region": "TAS",
+    "name": "Mount Read",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95958",
+    "region": "TAS",
+    "name": "Scotts Peak",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94956",
+    "region": "TAS",
+    "name": "Strahan",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95962",
+    "region": "TAS",
+    "name": "Warra",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94959",
+    "region": "TAS",
+    "name": "Butlers Gorge",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95959",
+    "region": "TAS",
+    "name": "Liawenee",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94964",
+    "region": "TAS",
+    "name": "Bushy Park",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94957",
+    "region": "TAS",
+    "name": "Ouse",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95989",
+    "region": "TAS",
+    "name": "Bicheno",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95975",
+    "region": "TAS",
+    "name": "Fingal",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94987",
+    "region": "TAS",
+    "name": "Friendly Beaches",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95988",
+    "region": "TAS",
+    "name": "Maria Island",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95987",
+    "region": "TAS",
+    "name": "Spring Bay",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95981",
+    "region": "TAS",
+    "name": "St Helens",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94981",
+    "region": "TAS",
+    "name": "Swansea",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95967",
+    "region": "TAS",
+    "name": "Cape Bruny AWS",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95972",
+    "region": "TAS",
+    "name": "Campania",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94988",
+    "region": "TAS",
+    "name": "Dennes Point",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94961",
+    "region": "TAS",
+    "name": "Dover",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94951",
+    "region": "TAS",
+    "name": "Dunalley",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95977",
+    "region": "TAS",
+    "name": "Grove",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94970",
+    "region": "TAS",
+    "name": "Hobart",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94619",
+    "region": "TAS",
+    "name": "Hobart Airport",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95979",
+    "region": "TAS",
+    "name": "kunanyi / Mount Wellington",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "95986",
+    "region": "TAS",
+    "name": "Tasman Island",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94977",
+    "region": "TAS",
+    "name": "Hartz Mountains",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94998",
+    "region": "TAS",
+    "name": "Macquarie Island",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "99137",
+    "region": "TAS",
+    "name": "TFS A",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "99138",
+    "region": "TAS",
+    "name": "TFS B",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "99139",
+    "region": "TAS",
+    "name": "TFS C",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "99953",
+    "region": "TAS",
+    "name": "Ross (TFS)",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "99954",
+    "region": "TAS",
+    "name": "Waratah (TFS)",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "99140",
+    "region": "TAS",
+    "name": "PWS A",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "99142",
+    "region": "TAS",
+    "name": "PWS C",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "99148",
+    "region": "TAS",
+    "name": "Davey Gorge (PWS)",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "99151",
+    "region": "TAS",
+    "name": "Dove River (PWS)",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "99829",
+    "region": "TAS",
+    "name": "Hobart Bushland Operations Depot (HCC)",
+    "prod": "IDT60801"
+  },
+  {
+    "id": "94125",
+    "region": "NT",
+    "name": "Batchelor",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94130",
+    "region": "NT",
+    "name": "Bradshaw",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94221",
+    "region": "NT",
+    "name": "Bradshaw-Angallari Valley (Defence)",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "99510",
+    "region": "NT",
+    "name": "Charles Point",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94120",
+    "region": "NT",
+    "name": "Darwin Airport",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "95122",
+    "region": "NT",
+    "name": "Darwin Harbour",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94128",
+    "region": "NT",
+    "name": "Douglas River",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94116",
+    "region": "NT",
+    "name": "Dum In Mirrie",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94002",
+    "region": "NT",
+    "name": "East Point",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "99501",
+    "region": "NT",
+    "name": "Gunn Point",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94161",
+    "region": "NT",
+    "name": "Kangaroo Flats (Defence)",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94000",
+    "region": "NT",
+    "name": "Knuckey Lagoon",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "95121",
+    "region": "NT",
+    "name": "Middle Point",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94162",
+    "region": "NT",
+    "name": "Mount Bundey North (Defence)",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94112",
+    "region": "NT",
+    "name": "Mount Bundey South (Defence)",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94105",
+    "region": "NT",
+    "name": "Noonamah",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94127",
+    "region": "NT",
+    "name": "Point Stuart",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "95111",
+    "region": "NT",
+    "name": "Wadeye (Port Keats)",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94119",
+    "region": "NT",
+    "name": "Pirlangimpi",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94122",
+    "region": "NT",
+    "name": "Point Fawcett",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94143",
+    "region": "NT",
+    "name": "Bulman",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94147",
+    "region": "NT",
+    "name": "Cape Wessel",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94141",
+    "region": "NT",
+    "name": "Central Arnhem Plateau",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94108",
+    "region": "NT",
+    "name": "Croker Island Airport",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94150",
+    "region": "NT",
+    "name": "Gove Airport",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94153",
+    "region": "NT",
+    "name": "Groote Eylandt Airport",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94137",
+    "region": "NT",
+    "name": "Jabiru",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "95142",
+    "region": "NT",
+    "name": "Maningrida Airport",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94140",
+    "region": "NT",
+    "name": "Milingimbi",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94109",
+    "region": "NT",
+    "name": "Murganella Airstrip",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "95146",
+    "region": "NT",
+    "name": "Ngayawili (Elcho Island)",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94106",
+    "region": "NT",
+    "name": "Ngukurr AWS",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94110",
+    "region": "NT",
+    "name": "Oenpelli Airport",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94139",
+    "region": "NT",
+    "name": "Warruwi",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94152",
+    "region": "NT",
+    "name": "Borroloola",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94248",
+    "region": "NT",
+    "name": "Centre Island",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94234",
+    "region": "NT",
+    "name": "Daly Waters",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94239",
+    "region": "NT",
+    "name": "McArthur River Mine",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94131",
+    "region": "NT",
+    "name": "Tindal",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94222",
+    "region": "NT",
+    "name": "Bradshaw-Koolendong Valley",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94225",
+    "region": "NT",
+    "name": "Delamere",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94232",
+    "region": "NT",
+    "name": "Victoria River Downs",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94238",
+    "region": "NT",
+    "name": "Tennant Creek",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94326",
+    "region": "NT",
+    "name": "Alice Springs Airport",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94327",
+    "region": "NT",
+    "name": "Jervois",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94328",
+    "region": "NT",
+    "name": "Territory Grape Farm",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94463",
+    "region": "NT",
+    "name": "Curtin Springs",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94321",
+    "region": "NT",
+    "name": "Walungurru (Kintore)",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94462",
+    "region": "NT",
+    "name": "Yulara",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94003",
+    "region": "NT",
+    "name": "The Granites Airport",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "94231",
+    "region": "NT",
+    "name": "Lajamanu",
+    "prod": "IDD60801"
+  },
+  {
+    "id": "95322",
+    "region": "NT",
+    "name": "Rabbit Flat",
+    "prod": "IDD60801"
+  }
+]
