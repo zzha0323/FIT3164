@@ -1,0 +1,642 @@
+{
+  "last_updated": "2026-05-17T00:48:58.567Z",
+  "regions": {
+    "NSW": [
+      {
+        "name": "Lismore Airport",
+        "temp": 18.7,
+        "humidity": 93,
+        "wind": 6,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Casino",
+        "temp": 19.2,
+        "humidity": 88,
+        "wind": 4,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Murwillumbah",
+        "temp": 18,
+        "humidity": 88,
+        "wind": 2,
+        "time": "20260517090000"
+      },
+      {
+        "name": "Yamba",
+        "temp": 20.6,
+        "humidity": 95,
+        "wind": 7,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Coolangatta",
+        "temp": 23.5,
+        "humidity": 76,
+        "wind": 13,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Ballina",
+        "temp": 19.8,
+        "humidity": 92,
+        "wind": 7,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Evans Head",
+        "temp": 20.9,
+        "humidity": 89,
+        "wind": 2,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Cape Byron",
+        "temp": 19.5,
+        "humidity": 92,
+        "wind": 11,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Maitland Airport",
+        "temp": 17,
+        "humidity": 93,
+        "wind": 0,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Gosford",
+        "temp": 17.3,
+        "humidity": 96,
+        "wind": 0,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Mount Seaview",
+        "temp": 16.6,
+        "humidity": 98,
+        "wind": 0,
+        "time": "20260517090000"
+      },
+      {
+        "name": "Kempsey Airport",
+        "temp": 18.4,
+        "humidity": 92,
+        "wind": 4,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Dorrigo",
+        "temp": 14.1,
+        "humidity": 94,
+        "wind": 6,
+        "time": "20260516090000"
+      },
+      {
+        "name": "Port Macquarie Airport",
+        "temp": 19.3,
+        "humidity": 95,
+        "wind": 6,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Grafton Airport",
+        "temp": 22.6,
+        "humidity": 80,
+        "wind": 6,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Grafton AgRS",
+        "temp": 20.7,
+        "humidity": 85,
+        "wind": 2,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Coffs Harbour Airport",
+        "temp": 20.5,
+        "humidity": 88,
+        "wind": 7,
+        "time": "20260517104000"
+      },
+      {
+        "name": "Lake Macquarie - Cooranbong",
+        "temp": 16.8,
+        "humidity": 100,
+        "wind": 0,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Cessnock Airport",
+        "temp": 16.6,
+        "humidity": 95,
+        "wind": 0,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Taree Airport",
+        "temp": 17.9,
+        "humidity": 96,
+        "wind": 9,
+        "time": "20260517103000"
+      }
+    ],
+    "NT": [
+      {
+        "name": "Darwin Airport",
+        "temp": 28.8,
+        "humidity": 80,
+        "wind": 15,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Batchelor",
+        "temp": 28.7,
+        "humidity": 76,
+        "wind": 9,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Bradshaw",
+        "temp": 29.8,
+        "humidity": 66,
+        "wind": 6,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Bradshaw-Angallari Valley (Defence)",
+        "temp": 28.8,
+        "humidity": 61,
+        "wind": 6,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Darwin Harbour",
+        "temp": null,
+        "humidity": null,
+        "wind": null,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Charles Point",
+        "temp": 29.4,
+        "humidity": 76,
+        "wind": 9,
+        "time": "20260517100000"
+      }
+    ],
+    "QLD": [
+      {
+        "name": "Charters Towers Airport",
+        "temp": 24.9,
+        "humidity": 59,
+        "wind": 11,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Weipa",
+        "temp": 29.4,
+        "humidity": 65,
+        "wind": 26,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Scherger",
+        "temp": 28.3,
+        "humidity": 72,
+        "wind": 15,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Horn Island",
+        "temp": 29.5,
+        "humidity": 72,
+        "wind": 24,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Thursday Island",
+        "temp": 28.1,
+        "humidity": null,
+        "wind": null,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Coconut Island",
+        "temp": 30.2,
+        "humidity": null,
+        "wind": null,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Coen Airport",
+        "temp": 29.2,
+        "humidity": 62,
+        "wind": 19,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Lockhart River",
+        "temp": 28.5,
+        "humidity": 71,
+        "wind": 24,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Mornington Island Airport",
+        "temp": 29.1,
+        "humidity": 64,
+        "wind": 19,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Sweers Island",
+        "temp": 27.7,
+        "humidity": 72,
+        "wind": 20,
+        "time": "20260517090000"
+      },
+      {
+        "name": "Burketown Airport",
+        "temp": 30.5,
+        "humidity": 58,
+        "wind": 22,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Century Mine",
+        "temp": 27.9,
+        "humidity": 61,
+        "wind": 13,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Normanton",
+        "temp": 28.5,
+        "humidity": 55,
+        "wind": 11,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Kowanyama",
+        "temp": 31.9,
+        "humidity": 51,
+        "wind": 19,
+        "time": "20260516143000"
+      },
+      {
+        "name": "Palmerville",
+        "temp": 28.8,
+        "humidity": 55,
+        "wind": 13,
+        "time": "20260517103000"
+      }
+    ],
+    "SA": [
+      {
+        "name": "Adelaide Airport",
+        "temp": 18.1,
+        "humidity": 81,
+        "wind": 6,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Adelaide (West Terrace /  ngayirdapira)",
+        "temp": 18.4,
+        "humidity": 81,
+        "wind": 7,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Hindmarsh Island",
+        "temp": 17.4,
+        "humidity": 83,
+        "wind": 13,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Mount Crawford",
+        "temp": 12.8,
+        "humidity": 97,
+        "wind": 17,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Nuriootpa",
+        "temp": 14.8,
+        "humidity": 91,
+        "wind": 4,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Kuitpo",
+        "temp": 15,
+        "humidity": 87,
+        "wind": 15,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Mount Barker",
+        "temp": 14.4,
+        "humidity": 96,
+        "wind": 7,
+        "time": "20260516090000"
+      },
+      {
+        "name": "Noarlunga",
+        "temp": 18.6,
+        "humidity": 84,
+        "wind": 4,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Edinburgh",
+        "temp": 16.3,
+        "humidity": 86,
+        "wind": 15,
+        "time": "20260517100000"
+      },
+      {
+        "name": "Mount Lofty",
+        "temp": 12.4,
+        "humidity": 99,
+        "wind": 4,
+        "time": "20260517100000"
+      }
+    ],
+    "TAS": [
+      {
+        "name": "King Island Airport",
+        "temp": 14.6,
+        "humidity": 93,
+        "wind": 7,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Marrawah",
+        "temp": 13.5,
+        "humidity": 97,
+        "wind": 9,
+        "time": "20260517090000"
+      },
+      {
+        "name": "Smithton",
+        "temp": 15.5,
+        "humidity": 97,
+        "wind": 4,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Sheffield",
+        "temp": 13.6,
+        "humidity": 97,
+        "wind": 0,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Kennaook / Cape Grim",
+        "temp": 14.5,
+        "humidity": 99,
+        "wind": 7,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Luncheon Hill",
+        "temp": 13.3,
+        "humidity": 99,
+        "wind": 9,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Devonport Airport",
+        "temp": 15,
+        "humidity": 93,
+        "wind": 11,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Burnie Port",
+        "temp": 15.8,
+        "humidity": null,
+        "wind": 9,
+        "time": "20260517103000"
+      }
+    ],
+    "VIC": [
+      {
+        "name": "Mildura",
+        "temp": 16.7,
+        "humidity": 92,
+        "wind": 2,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Cape Nelson",
+        "temp": 15.6,
+        "humidity": 90,
+        "wind": 11,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Nhill Aerodrome",
+        "temp": 15.5,
+        "humidity": 96,
+        "wind": 9,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Ararat",
+        "temp": 12.1,
+        "humidity": 99,
+        "wind": 0,
+        "time": "20260517090000"
+      },
+      {
+        "name": "Ben Nevis",
+        "temp": 10.7,
+        "humidity": 98,
+        "wind": 9,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Stawell",
+        "temp": 13.5,
+        "humidity": 100,
+        "wind": 6,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Hopetoun Airport",
+        "temp": 15.5,
+        "humidity": 100,
+        "wind": 7,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Charlton",
+        "temp": 15.9,
+        "humidity": 100,
+        "wind": 0,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Cape Otway",
+        "temp": 14.5,
+        "humidity": 96,
+        "wind": 13,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Swan Hill",
+        "temp": 16.9,
+        "humidity": 85,
+        "wind": 7,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Kerang",
+        "temp": 15.9,
+        "humidity": 90,
+        "wind": 0,
+        "time": "20260517090000"
+      },
+      {
+        "name": "Warracknabeal Airport",
+        "temp": 14.6,
+        "humidity": 98,
+        "wind": 6,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Dartmoor",
+        "temp": 14.9,
+        "humidity": 98,
+        "wind": 7,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Casterton",
+        "temp": 14,
+        "humidity": 94,
+        "wind": 7,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Walpeup",
+        "temp": 15.2,
+        "humidity": 95,
+        "wind": 11,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Edenhope",
+        "temp": 14.3,
+        "humidity": 100,
+        "wind": 6,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Longerenong",
+        "temp": 14.6,
+        "humidity": 97,
+        "wind": 6,
+        "time": "20260517103000"
+      },
+      {
+        "name": "Horsham",
+        "temp": 14.7,
+        "humidity": 97,
+        "wind": 6,
+        "time": "20260517103000"
+      }
+    ],
+    "WA": [
+      {
+        "name": "Kalumburu",
+        "temp": 27.6,
+        "humidity": 84,
+        "wind": 2,
+        "time": "20260517083000"
+      },
+      {
+        "name": "Cygnet Bay",
+        "temp": 27.8,
+        "humidity": 70,
+        "wind": null,
+        "time": "20260516090000"
+      },
+      {
+        "name": "Broome",
+        "temp": 25.8,
+        "humidity": 85,
+        "wind": 15,
+        "time": "20260517083000"
+      },
+      {
+        "name": "Curtin",
+        "temp": 26.6,
+        "humidity": 59,
+        "wind": 19,
+        "time": "20260517083000"
+      },
+      {
+        "name": "Fitzroy Crossing",
+        "temp": 26.1,
+        "humidity": 61,
+        "wind": null,
+        "time": "20260517083000"
+      },
+      {
+        "name": "Adele Island",
+        "temp": 28.7,
+        "humidity": null,
+        "wind": 11,
+        "time": "20260517083000"
+      },
+      {
+        "name": "Halls Creek",
+        "temp": 20.3,
+        "humidity": 73,
+        "wind": 22,
+        "time": "20260517083000"
+      },
+      {
+        "name": "Doongan",
+        "temp": 28.5,
+        "humidity": 68,
+        "wind": 2,
+        "time": "20260516090000"
+      },
+      {
+        "name": "Kununurra Airport",
+        "temp": 25.7,
+        "humidity": 83,
+        "wind": 17,
+        "time": "20260517083000"
+      },
+      {
+        "name": "Broome Port",
+        "temp": 24.4,
+        "humidity": null,
+        "wind": 15,
+        "time": "20260517083000"
+      },
+      {
+        "name": "Koolan Island / Koolan Central",
+        "temp": 27.5,
+        "humidity": 58,
+        "wind": 11,
+        "time": "20260517083000"
+      },
+      {
+        "name": "Lombadina",
+        "temp": 28.1,
+        "humidity": 61,
+        "wind": 6,
+        "time": "20260517083000"
+      }
+    ]
+  }
+}
